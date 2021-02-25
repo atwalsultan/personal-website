@@ -1,0 +1,218 @@
+/* Importing fonts */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&family=Sansita+Swashed:wght@400;500;600&display=swap');
+
+/* Resetting the margins and paddings for all elements to 0 so that I can add custom values later */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    line-height: 1.5;
+    font-family: "Raleway", serif;
+    background-color: #C9D6E8;
+}
+
+header, nav, main, footer {
+    margin: .75rem;
+}
+
+header, nav li, section, footer, .interests-images img {
+    /* Making corners rounded */
+    border-radius: 10px;
+
+    /* Adding border */
+    border: 1px solid #808080;
+
+    box-shadow: 0 2px 2px rgb(100, 100, 100);
+} 
+
+h1, h2, h3 {
+    font-family: "Sansita Swashed", sans-serif;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid black;
+}
+
+p {
+    text-align: justify;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    /* Underline links on hover */
+    text-decoration: underline;
+}
+
+header img {
+    width: 175px;
+
+    /* Make image circular */
+    border-radius: 50%;
+
+    border: 2px solid #808080;
+}
+
+header {
+    text-align: center;
+    padding: 1rem;
+    background-color: #F5F5F5;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+header h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+nav {
+    font-style: italic;
+    font-weight: 600;
+}
+
+nav ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: .25rem;
+    text-align: center;
+}
+
+nav li {
+    background-color: #8B99A7;
+    padding: .2rem;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+section {
+    background-color: #F5F5F5;
+    padding: 1rem;
+}
+
+section a {
+    color: rgb(63, 63, 241);
+}
+
+article {
+    margin-bottom: 1rem;
+}
+
+footer {
+    background-color: #8B99A7;
+    text-align: center;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: .75rem;
+}
+
+footer li {
+    display: inline-block;
+    padding-right: 1rem;
+}
+
+i {
+    font-size: 2rem;
+}
+
+.raleway-font {
+    font-family: "Raleway", serif;
+    font-weight: 600;
+}
+
+.interests-images {
+    margin-top: .5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: .25rem;
+}
+
+.interests-images img {
+    width: 24vw;
+    height: 29vw;
+    margin: auto;
+}
+
+.skills-list {
+    margin-top: .5rem;
+    padding-left: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#contact {
+    padding: .75rem;
+}
+
+/* Tablets and desktops */
+@media screen and (min-width: 750px){
+    .wrapper {
+        max-width: 900px;
+        margin: auto;
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+    }
+
+    .intro {
+        grid-column: span 2;
+        text-align: left;
+    }
+
+    header h1 {
+        font-size: 3rem;
+    }
+    
+    header h3 {
+        font-size: 2rem;
+    }
+
+	nav ul {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    main {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .skills-list {
+        grid-template-columns: 1fr;
+    }
+
+    .interests-images img {
+        width: 145px;
+        height: 170px;
+    }
+
+    #certifications {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    #projects {
+        grid-column: 1 / span 3;
+    }
+
+    #interests {
+        grid-column: span 2;
+    }
+}
