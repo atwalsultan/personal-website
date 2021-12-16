@@ -6,7 +6,9 @@ const PORT = 8080;
 
 // Route handlers
 const certifications = require('./routes/developer/certifications');
-const educations = require('./routes/developer/educations');
+const educations = require('./routes/developer/education');
+const jobs = require('./routes/developer/jobs');
+const projects = require('./routes/developer/projects');
 
 // CORS
 const cors = require("cors");
@@ -25,7 +27,9 @@ app.use(express.json());
 
 // Routes
 app.use('/certifications', certifications);
-app.use('/educations', educations);
+app.use('/education', educations);
+app.use('/experience', jobs);
+app.use('/work', projects);
 
 // Specify port and listen
 app.listen(PORT, () => {
