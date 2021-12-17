@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const DeveloperExperience = () => {
+const DeveloperExperience = ({ setCurrentPage, experienceRef }) => {
     const [experience, setExperience] = useState([]);
 
     // Fetch experience
@@ -14,20 +14,21 @@ const DeveloperExperience = () => {
     useEffect(() => {
         let unmounted = false;
 
-        // Fetch experience when component mounts
+        // Fetch experience and set state for current page when component mounts
         if(!unmounted) {
             getExperience();
+            setCurrentPage('experience');
         }
 
         // Unsubscribe to any background calls when componenet unmounts
         return () => {
             unmounted = true;
         }
-    }, [])
+    }, [setCurrentPage])
 
     return (
         <div>
-            <h1>Experience</h1>
+            <h1 ref={ experienceRef }>Experience</h1>
             {
                 experience.map((item, index) => (<p key={index}>{item.role}</p>))
             }
