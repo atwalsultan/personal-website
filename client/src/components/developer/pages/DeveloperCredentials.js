@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const DeveloperCredentials = () => {
+const DeveloperCredentials = ({ setCurrentPage, credentialsRef }) => {
     const [education, setEducation] = useState([]);
     const [certifications, setCertifications] = useState([]);
 
@@ -23,21 +23,22 @@ const DeveloperCredentials = () => {
     useEffect(() => {
         let unmounted = false;
 
-        // Fetch education and certifications when component mounts
+        // Fetch education and certifications and set state for current when component mounts
         if(!unmounted) {
             getEducation();
             getCertifications();
+            setCurrentPage('credentials');
         }
 
         // Unsubscribe to any background calls when componenet unmounts
         return () => {
             unmounted = true;
         }
-    }, [])
+    }, [setCurrentPage])
 
     return (
         <div>
-            <h1>Education</h1>
+            <h1 ref={ credentialsRef }>Education</h1>
             {
                 education.map((item, index) => (<p key={index}>{item.institution}</p>))
             }
