@@ -1,37 +1,29 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from "react";
+
+import ProjectList from "../lists/ProjectList";
 
 const DeveloperWork = ({ setCurrentPage, workRef }) => {
-    const [work, setWork] = useState([]);
-
-    // Fetch projects
-    const getWork = async () => {
-        const url = "http://localhost:8080/work";
-        const response = await fetch(url);
-        const responseJson = await response.json();
-        setWork(responseJson);
-    }
-
     useEffect(() => {
         let unmounted = false;
 
         // Fetch work when component mounts
         if(!unmounted) {
-            getWork();
-            setCurrentPage('work');
+            setCurrentPage("work");
         }
 
-        // Unsubscribe to any background calls when componenet unmounts
+        // Unsubscribe to any background calls when component unmounts
         return () => {
             unmounted = true;
         }
     }, [setCurrentPage])
 
     return (
-        <div>
-            <h1 ref={ workRef }>Work</h1>
-            {
-                work.map((item, index) => (<p key={index}>{item.role}</p>))
-            }
+        <div className="site-content">
+            <h1 ref={ workRef }>My Work</h1>
+
+            <div className="projects-list">
+                <ProjectList />
+            </div>
         </div>
     )
 }
