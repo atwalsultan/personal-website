@@ -7,7 +7,7 @@ const DeveloperAbout = ({ setCurrentPage, aboutRef }) => {
     }, [setCurrentPage])
 
     return (
-        <div>
+        <div className="site-content">
             <h1 ref={ aboutRef }>About</h1>
             <p>Developer About</p>
         </div>

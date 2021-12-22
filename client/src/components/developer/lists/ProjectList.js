@@ -28,7 +28,7 @@ const ProjectList = () => {
     }, [])
 
     return (
-        work.map((item, index) => <ProjectCard project={item} key={index} />)
+        work.sort((a, b) => new Date(b.to) - new Date(a.to)).map((item, index) => <ProjectCard project={ item } key={ index } />)
     )
 }
 
