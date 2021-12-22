@@ -1,26 +1,28 @@
-const ProjectCard = ({ project }) => {
-    const from = new Date(project.from);
-    const to = new Date(project.to);
+const CertificationCard = ({ certification }) => {
+    const from = new Date(certification.from);
+    const to = new Date(certification.to);
 
     const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
+    console.log(certification.from);
+
     return (
-        <div className="project-card">
+        <div className="certification-card">
             <div className="name-location">
-                <h2>{ project.name }</h2>
-                <h4>{ project.location }</h4>
+                <h2>{ certification.name }</h2>
+                <h4>{ certification.location }</h4>
             </div>
 
-            <div className="role-dates">
-                <h3>{ project.role }</h3>
+            <div className="institution-dates">
+                <h3>{ certification.institution }</h3>
                 { (from.getMonth() === to.getMonth() && from.getFullYear() === to.getFullYear()) ? <h4>{ months[from.getMonth()]} { from.getFullYear() }</h4> : <h4>{ months[from.getMonth()]} { from.getFullYear() } - { months[to.getMonth()] } { to.getFullYear() }</h4> }
             </div>
 
             <div className="description">
-                <p>{ project.description }</p>
+                <p>{ certification.description }</p>
             </div>
         </div>
     )
 }
 
-export default ProjectCard
+export default CertificationCard

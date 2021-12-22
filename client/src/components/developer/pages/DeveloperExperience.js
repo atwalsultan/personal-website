@@ -1,22 +1,13 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
+import ExperienceList from '../lists/ExperienceList';
 
 const DeveloperExperience = ({ setCurrentPage, experienceRef }) => {
-    const [experience, setExperience] = useState([]);
-
-    // Fetch experience
-    const getExperience = async () => {
-        const url = 'http://localhost:8080/experience';
-        const response = await fetch(url);
-        const responseJson = await response.json();
-        setExperience(responseJson);
-    }
 
     useEffect(() => {
         let unmounted = false;
 
         // Fetch experience and set state for current page when component mounts
         if(!unmounted) {
-            getExperience();
             setCurrentPage('experience');
         }
 
@@ -27,11 +18,12 @@ const DeveloperExperience = ({ setCurrentPage, experienceRef }) => {
     }, [setCurrentPage])
 
     return (
-        <div>
+        <div className="site-content">
             <h1 ref={ experienceRef }>Experience</h1>
-            {
-                experience.map((item, index) => (<p key={index}>{item.role}</p>))
-            }
+            
+            <div className="job-list">
+                <ExperienceList />
+            </div>
         </div>
     )
 }

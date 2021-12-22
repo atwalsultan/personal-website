@@ -7,7 +7,7 @@ const DeveloperHome = ({ setCurrentPage, homeRef }) => {
     }, [setCurrentPage])
 
     return (
-        <div>
+        <div className="site-content">
             <h1 ref={ homeRef }>Home</h1>
             <p>Developer Home</p>
         </div>
