@@ -19,7 +19,7 @@ const DeveloperWork = ({ setCurrentPage, workRef }) => {
 
     return (
         <div className="site-content">
-            <h1 ref={ workRef }>My Work</h1>
+            <h2 ref={ workRef }>My Work</h2>
 
             <div className="projects-list">
                 <ProjectList />

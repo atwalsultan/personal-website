@@ -7,12 +7,12 @@ const DegreeCard = ({ degree }) => {
     return (
         <div className="degree-card">
             <div className="institution-location">
-                <h2>{ degree.institution }</h2>
+                <h3>{ degree.institution }</h3>
                 <h4>{ degree.location }</h4>
             </div>
 
             <div className="program-dates">
-                <h3>{ degree.program }</h3>
+                <h4>{ degree.program }</h4>
                 { (from.getMonth() === to.getMonth() && from.getFullYear() === to.getFullYear()) ? <h4>{ months[from.getMonth()]} { from.getFullYear() }</h4> : <h4>{ months[from.getMonth()]} { from.getFullYear() } - { months[to.getMonth()] } { to.getFullYear() }</h4> }
             </div>
 

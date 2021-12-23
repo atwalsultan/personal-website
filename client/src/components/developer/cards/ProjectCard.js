@@ -7,12 +7,12 @@ const ProjectCard = ({ project }) => {
     return (
         <div className="project-card">
             <div className="name-location">
-                <h2>{ project.name }</h2>
+                <h3>{ project.name }</h3>
                 <h4>{ project.location }</h4>
             </div>
 
             <div className="role-dates">
-                <h3>{ project.role }</h3>
+                <h4>{ project.role }</h4>
                 { (from.getMonth() === to.getMonth() && from.getFullYear() === to.getFullYear()) ? <h4>{ months[from.getMonth()]} { from.getFullYear() }</h4> : <h4>{ months[from.getMonth()]} { from.getFullYear() } - { months[to.getMonth()] } { to.getFullYear() }</h4> }
             </div>
 

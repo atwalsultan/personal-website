@@ -8,7 +8,7 @@ const DeveloperAbout = ({ setCurrentPage, aboutRef }) => {
 
     return (
         <div className="site-content">
-            <h1 ref={ aboutRef }>About</h1>
+            <h2 ref={ aboutRef }>About</h2>
             <p>Developer About</p>
         </div>
     )

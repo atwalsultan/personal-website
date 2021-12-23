@@ -9,12 +9,12 @@ const CertificationCard = ({ certification }) => {
     return (
         <div className="certification-card">
             <div className="name-location">
-                <h2>{ certification.name }</h2>
+                <h3>{ certification.name }</h3>
                 <h4>{ certification.location }</h4>
             </div>
 
             <div className="institution-dates">
-                <h3>{ certification.institution }</h3>
+                <h4>{ certification.institution }</h4>
                 { (from.getMonth() === to.getMonth() && from.getFullYear() === to.getFullYear()) ? <h4>{ months[from.getMonth()]} { from.getFullYear() }</h4> : <h4>{ months[from.getMonth()]} { from.getFullYear() } - { months[to.getMonth()] } { to.getFullYear() }</h4> }
             </div>
 

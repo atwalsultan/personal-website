@@ -8,8 +8,8 @@ const Header = () => {
 
                 </div>
                 <div>
-                    <p className="header-name">Sultan Singh Atwal</p>
-                    <p className="header-role">Full Stack Software Developer</p>
+                    <h1 className="header-name">Sultan Singh Atwal</h1>
+                    <h2 className="header-role">Full Stack Software Developer</h2>
                 </div>
             </div>
 
