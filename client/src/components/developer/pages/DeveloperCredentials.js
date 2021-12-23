@@ -21,12 +21,12 @@ const DeveloperCredentials = ({ setCurrentPage, credentialsRef }) => {
 
     return (
         <div className="site-content">
-            <h1 ref={ credentialsRef }>Education</h1>
+            <h2 ref={ credentialsRef }>Education</h2>
             <div className="degrees-list">
                 <DegreeList />         
             </div>
 
-            <h1>Certifications</h1>
+            <h2>Certifications</h2>
             <div className="certifications-list">
                 <CertificationList />
             </div>

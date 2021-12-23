@@ -19,7 +19,7 @@ const DeveloperExperience = ({ setCurrentPage, experienceRef }) => {
 
     return (
         <div className="site-content">
-            <h1 ref={ experienceRef }>Experience</h1>
+            <h2 ref={ experienceRef }>Experience</h2>
             
             <div className="job-list">
                 <ExperienceList />
