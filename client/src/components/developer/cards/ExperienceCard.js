@@ -1,11 +1,21 @@
+import { useState, useEffect } from "react";
+
 const ExperienceCard = ({ job }) => {
     const from = new Date(job.from);
     const to = new Date(job.to);
 
     const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
+    const [hidden, setHidden] = useState(true);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setHidden(false);
+        }, 10)
+    }, [])
+   
     return (
-        <div className="job-card">
+        <div className={`job-card${hidden ? " hidden" : ""}`}>
             <div className="company-location">
                 <h3>{ job.company }</h3>
                 <h4>{ job.location }</h4>

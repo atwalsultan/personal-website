@@ -1,11 +1,21 @@
+import { useState, useEffect } from "react";
+
 const ProjectCard = ({ project }) => {
     const from = new Date(project.from);
     const to = new Date(project.to);
 
     const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
+    const [hidden, setHidden] = useState(true);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setHidden(false);
+        }, 10)
+    }, [])
+
     return (
-        <div className="project-card">
+        <div className={`project-card${hidden ? " hidden" : ""}`}>
             <div className="name-location">
                 <h3>{ project.name }</h3>
                 <h4>{ project.location }</h4>

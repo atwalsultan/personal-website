@@ -1,13 +1,21 @@
+import { useState, useEffect } from "react";
+
 const CertificationCard = ({ certification }) => {
     const from = new Date(certification.from);
     const to = new Date(certification.to);
 
     const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    
+    const [hidden, setHidden] = useState(true);
 
-    console.log(certification.from);
+    useEffect(() => {
+        setTimeout(() => {
+            setHidden(false);
+        }, 10)
+    }, [])
 
     return (
-        <div className="certification-card">
+        <div className={`certification-card${hidden ? " hidden" : ""}`}>
             <div className="name-location">
                 <h3>{ certification.name }</h3>
                 <h4>{ certification.location }</h4>
