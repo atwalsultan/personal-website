@@ -1,11 +1,13 @@
 import { FaLinkedin, FaGithub, FaStackOverflow } from "react-icons/fa";
 
+import SultanPic from "../../../static/sultan-pic.jpg"
+
 const Header = () => {
     return (
         <header className="site-header">
             <div className="header-column-1">
                 <div className="header-logo-container">
-
+                    <img src={ SultanPic } alt="Sultan" />
                 </div>
                 <div>
                     <h1 className="header-name">Sultan Singh Atwal</h1>

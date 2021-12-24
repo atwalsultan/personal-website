@@ -1,11 +1,21 @@
+import { useState, useEffect } from "react";
+
 const DegreeCard = ({ degree }) => {
     const from = new Date(degree.from);
     const to = new Date(degree.to);
 
     const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
+    const [hidden, setHidden] = useState(true);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setHidden(false);
+        }, 10)
+    }, [])
+
     return (
-        <div className="degree-card">
+        <div className={`degree-card${hidden ? " hidden" : ""}`}>
             <div className="institution-location">
                 <h3>{ degree.institution }</h3>
                 <h4>{ degree.location }</h4>
