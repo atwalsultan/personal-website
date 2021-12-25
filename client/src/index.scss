@@ -9,19 +9,19 @@
 
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
     background: #f1f1f1;
-    border-radius: 5px;
+    border-radius: 4px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: rgba(0,0,0,0.3);
-    border-radius: 5px;
+    border-radius: 4px;
 
     &:hover {
         background: rgba(0,0,0,0.4);
@@ -200,7 +200,7 @@ body {
                         display: flex;
                         flex-flow: row wrap;
                         justify-content: center;
-                        gap: 30px;
+                        gap: 45px;
                         padding: 0 10px;
 
                         div.project-card {
@@ -262,7 +262,7 @@ body {
                         display: flex;
                         flex-flow: row wrap;
                         justify-content: center;
-                        gap: 30px;
+                        gap: 45px;
                         padding: 0 10px;
 
                         div.job-card {
@@ -325,7 +325,7 @@ body {
                         display: flex;
                         flex-flow: row wrap;
                         justify-content: center;
-                        gap: 30px;
+                        gap: 45px;
                         padding: 0 10px;
 
                         div.degree-card {
@@ -387,7 +387,7 @@ body {
                         display: flex;
                         flex-flow: row wrap;
                         justify-content: center;
-                        gap: 30px;
+                        gap: 45px;
                         padding: 0 10px;
 
                         div.certification-card {
