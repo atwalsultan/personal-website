@@ -2,7 +2,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
-const PORT = 8080;
+const PORT = process.env.PORT || 5000;
 
 // Route handlers
 const certifications = require('./routes/developer/certifications');
