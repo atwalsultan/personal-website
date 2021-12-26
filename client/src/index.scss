@@ -151,6 +151,14 @@ body {
                         }
                     }
                 }
+
+                footer.navbar-footer {
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: center;
+                    align-items: center;
+                    padding-bottom: 8px;
+                }
             }
 
             main.site-content-container {
