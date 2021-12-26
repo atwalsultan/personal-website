@@ -18,6 +18,7 @@ const DeveloperApp = () => {
     const aboutRef = useRef(null);
 
     const [currentPage, setCurrentPage] = useState("home");
+    const [nightMode, setNightMode] = useState(false);
 
     const scrollToTop = () => {
         if(currentPage === "home") {
@@ -43,10 +44,10 @@ const DeveloperApp = () => {
 
     return (
         <>
-            <Header />
+            <Header nightMode={ nightMode } />
 
-            <div className="navbar-content">
-                <Navbar />
+            <div className={ nightMode ? "navbar-content dark" : "navbar-content" }>
+                <Navbar nightMode={ nightMode } setNightMode={ setNightMode } />
 
                 <main className="site-content-container">
                     <ScrollToTopButton scrollToTop={ scrollToTop } />

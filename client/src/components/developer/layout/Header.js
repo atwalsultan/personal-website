@@ -2,9 +2,9 @@ import { FaLinkedin, FaGithub, FaStackOverflow } from "react-icons/fa";
 
 import SultanPic from "../../../static/sultan-pic.jpg"
 
-const Header = () => {
+const Header = ({ nightMode }) => {
     return (
-        <header className="site-header">
+        <header className={ nightMode ? "site-header dark" : "site-header" }>
             <div className="header-column-1">
                 <div className="header-logo-container">
                     <img src={ SultanPic } alt="Sultan" />
