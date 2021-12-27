@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import TechList from "../lists/TechList";
 
 const ProjectCard = ({ project }) => {
     const from = new Date(project.from);
@@ -29,6 +30,10 @@ const ProjectCard = ({ project }) => {
             <div className="description">
                 <p>{ project.description }</p>
             </div>
+
+            <ul className="tech-used">
+                <TechList project={ project } />
+            </ul>
         </div>
     )
 }
