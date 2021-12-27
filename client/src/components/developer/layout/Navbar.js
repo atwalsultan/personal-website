@@ -38,7 +38,7 @@ const Navbar = ({ nightMode, setNightMode }) => {
                                 height: "100%",
                             }}
                         >
-                            <span>🌜</span>
+                            <span>🌞</span>
                         </div>
                     }
                     checkedIcon={
@@ -50,7 +50,7 @@ const Navbar = ({ nightMode, setNightMode }) => {
                             height: "100%",
                         }}
                     >
-                        <span>🌞</span>
+                        <span>🌜</span>
                     </div>
                     }
                 />
