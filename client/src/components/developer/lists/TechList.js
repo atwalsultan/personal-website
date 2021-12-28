@@ -1,8 +1,8 @@
 import TechCard from "../cards/TechCard";
 
-const TechList = ({ project }) => {
+const TechList = ({ list }) => {
     return (
-        project.tech.map((item, index) => <TechCard tech={ item } key={ index }/>)
+        list.map((item, index) => <TechCard tech={ item } key={ index }/>)
     )
 }
 

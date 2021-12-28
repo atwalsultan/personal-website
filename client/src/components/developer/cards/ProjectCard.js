@@ -32,7 +32,7 @@ const ProjectCard = ({ project }) => {
             </div>
 
             <ul className="tech-used">
-                <TechList project={ project } />
+                <TechList list={ project.tech } />
             </ul>
         </div>
     )
