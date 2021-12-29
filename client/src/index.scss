@@ -111,10 +111,15 @@ body {
                             svg {
                                 width: 25px;
                                 height: 25px;
-                                transition: all 0.15s ease-in-out;
+                                transition: all 0.5s ease-in-out;
+
+                                &:hover {
+                                    transform: rotate(360deg);
+                                }
 
                                 &:active {
                                     transform: scale(0.7);
+                                    transition: all 0.15s ease-in-out;
                                 }
                             }
                         }
@@ -270,13 +275,37 @@ body {
                                 column-gap: 6px;
                                 row-gap: 6px;
                                 list-style-type: none;
-                                margin-top: 10px;
+                                margin: 10px 0 15px 0;
 
                                 li {
                                     padding: 4px 6px;
                                     border: 1px solid rgba(80, 80, 80, 0.3);
                                     background-color: #f4f4f4;
                                     border-radius: 4px;
+                                }
+                            }
+
+                            ul.links {
+                                display: flex;
+                                flex-flow: row-reverse nowrap;
+                                gap: 6px;
+                                list-style-type: none;
+
+                                li {
+                                    svg, img {
+                                        height: 23px;
+                                        width: 23px;
+                                        transition: 0.5s all ease-in-out;
+
+                                        &:hover {
+                                            transform: rotate(360deg);
+                                        }
+
+                                        &:active {
+                                            transition: 0.15s all ease-in-out;
+                                            transform: scale(0.7);
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -480,6 +509,22 @@ body {
                                 p {
                                     font-size: 18px;
                                     line-height: 24.5px;
+                                }
+                            }
+
+                            ul.tech-used {
+                                display: flex;
+                                flex-flow: row wrap;
+                                column-gap: 6px;
+                                row-gap: 6px;
+                                list-style-type: none;
+                                margin-top: 10px;
+
+                                li {
+                                    padding: 4px 6px;
+                                    border: 1px solid rgba(80, 80, 80, 0.3);
+                                    background-color: #f4f4f4;
+                                    border-radius: 4px;
                                 }
                             }
                         }
