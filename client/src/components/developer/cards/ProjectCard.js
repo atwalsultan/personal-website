@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
+import { FaGithub } from "react-icons/fa";
+
 import TechList from "../lists/TechList";
+import PersonalWebsiteIcon from '../../../static/live-site.svg';
 
 const ProjectCard = ({ project }) => {
     const from = new Date(project.from);
@@ -8,12 +11,15 @@ const ProjectCard = ({ project }) => {
     const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
     const [hidden, setHidden] = useState(true);
+    const [links, setLinks] = useState(null);
 
     useEffect(() => {
         setTimeout(() => {
             setHidden(false);
         }, 10)
-    }, [])
+
+        setLinks(project.links);
+    }, [project.links])
 
     return (
         <div className={`project-card${hidden ? " hidden" : ""}`}>
@@ -33,6 +39,11 @@ const ProjectCard = ({ project }) => {
 
             <ul className="tech-used">
                 <TechList list={ project.tech } />
+            </ul>
+
+            <ul className="links">
+                { links !== null && links.github !== "" && <li><a href={ links.github } target="_blank" rel="noreferrer"><FaGithub /></a></li> }
+                { links !== null && links.live !== "" && <li><a href={ links.live } target="_blank" rel="noreferrer"><img src={ PersonalWebsiteIcon } alt={ `Live deployment for ${project.name}` } /></a></li> }
             </ul>
         </div>
     )

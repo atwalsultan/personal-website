@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 
+import TechList from "../lists/TechList";
+
 const CertificationCard = ({ certification }) => {
     const from = new Date(certification.from);
     const to = new Date(certification.to);
@@ -29,6 +31,10 @@ const CertificationCard = ({ certification }) => {
             <div className="description">
                 <p>{ certification.description }</p>
             </div>
+
+            <ul className="tech-used">
+                <TechList list={ certification.tech } />
+            </ul>
         </div>
     )
 }
