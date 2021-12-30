@@ -7,7 +7,7 @@ const CertificationList = () => {
 
     // Fetch certifications
     const getCertifications = async () => {
-        const url = "https://atwalsultanbackend.herokuapp.com/certifications";
+        const url = "/certifications";
         const response = await fetch(url);
         const responseJson = await response.json();
         setCertifications(responseJson);

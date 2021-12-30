@@ -7,7 +7,7 @@ const DegreeList = () => {
 
     // Fetch degrees
     const getDegrees = async () => {
-        const url = "https://atwalsultanbackend.herokuapp.com/education";
+        const url = "/education";
         const response = await fetch(url);
         const responseJson = await response.json();
         setDegrees(responseJson);

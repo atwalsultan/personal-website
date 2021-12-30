@@ -7,7 +7,7 @@ const ExperienceList = () => {
 
     // Fetch experience
     const getExperience = async () => {
-        const url = "https://atwalsultanbackend.herokuapp.com/experience";
+        const url = "/experience";
         const response = await fetch(url);
         const responseJson = await response.json();
         setExperience(responseJson);

@@ -7,7 +7,7 @@ const ProjectList = () => {
 
     // Fetch projects
     const getWork = async () => {
-        const url = "https://atwalsultanbackend.herokuapp.com/work";
+        const url = "/work";
         const response = await fetch(url);
         const responseJson = await response.json();
         setWork(responseJson);
