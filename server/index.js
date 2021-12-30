@@ -1,6 +1,7 @@
 // Imports
 const express = require("express");
 const mongoose = require("mongoose");
+const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 5000;
 
@@ -30,6 +31,15 @@ app.use('/certifications', certifications);
 app.use('/education', educations);
 app.use('/experience', jobs);
 app.use('/work', projects);
+
+// For production environments
+__dirname = path.resolve();
+if(process.env.NODE_ENV === "production") {
+    app.use(express.static("client/build"));
+    app.get("*", (req, res) => {
+		res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+	});
+}
 
 // Specify port and listen
 app.listen(PORT, () => {
