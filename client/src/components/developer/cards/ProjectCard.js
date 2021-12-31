@@ -42,8 +42,8 @@ const ProjectCard = ({ project }) => {
             </ul>
 
             <ul className="links">
-                { links !== null && links.github !== "" && <li><a href={ links.github } target="_blank" rel="noreferrer"><FaGithub /></a></li> }
-                { links !== null && links.live !== "" && <li><a href={ links.live } target="_blank" rel="noreferrer"><img src={ PersonalWebsiteIcon } alt={ `Live deployment for ${project.name}` } /></a></li> }
+                { links !== null && links.github !== "" && <li><a href={ links.github } target="_blank" rel="noreferrer" title="View source code"><FaGithub /></a></li> }
+                { links !== null && links.live !== "" && <li><a href={ links.live } target="_blank" rel="noreferrer" title="View live deployment"><img src={ PersonalWebsiteIcon } alt={ `Live deployment for ${project.name}` } /></a></li> }
             </ul>
         </div>
     )

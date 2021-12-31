@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 
 import TechList from "../lists/TechList";
+import PersonalWebsiteIcon from '../../../static/live-site.svg';
 
 const CertificationCard = ({ certification }) => {
     const from = new Date(certification.from);
@@ -34,6 +35,14 @@ const CertificationCard = ({ certification }) => {
 
             <ul className="tech-used">
                 <TechList list={ certification.tech } />
+            </ul>
+
+            <ul className="links">
+                <li>
+                    <a href={ certification.link } target="_blank" rel="noreferrer" title="View credential">
+                        <img src={ PersonalWebsiteIcon } alt="" />
+                    </a>
+                </li>
             </ul>
         </div>
     )

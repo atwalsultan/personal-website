@@ -18,13 +18,13 @@ const Header = ({ nightMode }) => {
             <div className="header-column-2">
                 <ul className="header-social-links">
                     <li>
-                        <a href="https://www.linkedin.com/in/sultan-atwal-developer/" target="_blank" rel="noreferrer"><FaLinkedin /></a>
+                        <a href="https://www.linkedin.com/in/sultan-atwal-developer/" target="_blank" rel="noreferrer" title="LinkedIn"><FaLinkedin /></a>
                     </li>
                     <li>
-                        <a href="https://github.com/atwalsultan" target="_blank" rel="noreferrer"><FaGithub /></a>
+                        <a href="https://github.com/atwalsultan" target="_blank" rel="noreferrer" title="GitHub"><FaGithub /></a>
                     </li>
                     <li>
-                        <a href="https://stackoverflow.com/users/11409321/sultan-singh-atwal" target="_blank" rel="noreferrer"><FaStackOverflow /></a>
+                        <a href="https://stackoverflow.com/users/11409321/sultan-singh-atwal" target="_blank" rel="noreferrer" title="Stack Overflow"><FaStackOverflow /></a>
                     </li>
                 </ul>
             </div>

@@ -104,22 +104,21 @@ body {
                     list-style-type: none;
                     display: flex;
                     flex-flow: row nowrap;
-                    gap: 20px;
+                    gap: 15px;
 
                     li {
                         a {
                             svg {
-                                width: 25px;
-                                height: 25px;
-                                transition: all 0.5s ease-in-out;
+                                width: 28px;
+                                height: 28px;
+                                transition: all 0.15s ease-in-out;
 
                                 &:hover {
-                                    transform: rotate(360deg);
+                                    transform: scale(1.2);
                                 }
 
                                 &:active {
-                                    transform: scale(0.7);
-                                    transition: all 0.15s ease-in-out;
+                                    transform: scale(0.9);
                                 }
                             }
                         }
@@ -295,15 +294,14 @@ body {
                                     svg, img {
                                         height: 23px;
                                         width: 23px;
-                                        transition: 0.5s all ease-in-out;
+                                        transition: 0.15s all ease-in-out;
 
                                         &:hover {
-                                            transform: rotate(360deg);
+                                            transform: scale(1.2);
                                         }
 
                                         &:active {
-                                            transition: 0.15s all ease-in-out;
-                                            transform: scale(0.7);
+                                            transform: scale(0.9);
                                         }
                                     }
                                 }
@@ -525,6 +523,29 @@ body {
                                     border: 1px solid rgba(80, 80, 80, 0.3);
                                     background-color: #f4f4f4;
                                     border-radius: 4px;
+                                }
+                            }
+
+                            ul.links {
+                                display: flex;
+                                flex-flow: row-reverse nowrap;
+                                gap: 6px;
+                                list-style-type: none;
+
+                                li {
+                                    svg, img {
+                                        height: 23px;
+                                        width: 23px;
+                                        transition: 0.15s all ease-in-out;
+
+                                        &:hover {
+                                            transform: scale(1.2);
+                                        }
+
+                                        &:active {
+                                            transform: scale(0.9);
+                                        }
+                                    }
                                 }
                             }
                         }
