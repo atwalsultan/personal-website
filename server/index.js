@@ -6,10 +6,10 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Route handlers
-const certifications = require('./routes/developer/certifications');
-const educations = require('./routes/developer/education');
-const jobs = require('./routes/developer/jobs');
-const projects = require('./routes/developer/projects');
+const certifications = require("./routes/developer/certifications");
+const educations = require("./routes/developer/education");
+const jobs = require("./routes/developer/jobs");
+const projects = require("./routes/developer/projects");
 
 // CORS
 const cors = require("cors");
@@ -27,17 +27,17 @@ mongoose.connect(process.env.MONGO_URI)
 app.use(express.json());
 
 // Routes
-app.use('/certifications', certifications);
-app.use('/education', educations);
-app.use('/experience', jobs);
-app.use('/work', projects);
+app.use("/certifications", certifications);
+app.use("/education", educations);
+app.use("/experience", jobs);
+app.use("/work", projects);
 
 // For production environments
 __dirname = path.resolve();
 if(process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
     app.get("*", (req, res) => {
-		res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+		res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
 	});
 }
 
