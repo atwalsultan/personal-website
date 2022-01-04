@@ -27,8 +27,10 @@ const DegreeCard = ({ degree }) => {
             </div>
 
             <div className="description">
-                <p>{ degree.credential }</p>
-                <p>{ degree.percentage ? `Percentage: ${degree.percentage}%` : `GPA: ${degree.gpa} / 4.33` }</p>
+                <ul>
+                    <li>{ degree.credential }</li>
+                    <li>{ degree.percentage ? `Percentage: ${degree.percentage}%` : `GPA: ${degree.gpa} / 4.33` }</li>
+                </ul>
             </div>
 
             <div></div>

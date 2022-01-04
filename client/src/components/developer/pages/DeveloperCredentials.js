@@ -3,10 +3,13 @@ import { useEffect } from 'react';
 import DegreeList from '../lists/DegreeList';
 import CertificationList from '../lists/CertificationList';
 
-const DeveloperCredentials = ({ setCurrentPage, credentialsRef }) => {
+const DeveloperCredentials = ({ setCurrentPage, credentialsRef, setMenu }) => {
 
     useEffect(() => {
         let unmounted = false;
+
+        // Dismiss navbar
+        setMenu(false);
 
         // Fetch education and certifications and set state for current when component mounts
         if(!unmounted) {
@@ -17,7 +20,7 @@ const DeveloperCredentials = ({ setCurrentPage, credentialsRef }) => {
         return () => {
             unmounted = true;
         }
-    }, [setCurrentPage])
+    }, [setCurrentPage, setMenu])
 
     return (
         <div className="site-content">

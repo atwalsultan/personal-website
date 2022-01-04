@@ -1,10 +1,13 @@
 import { useEffect } from 'react';
 import ExperienceList from '../lists/ExperienceList';
 
-const DeveloperExperience = ({ setCurrentPage, experienceRef }) => {
+const DeveloperExperience = ({ setCurrentPage, experienceRef, setMenu }) => {
 
     useEffect(() => {
         let unmounted = false;
+
+        // Dismiss navbar
+        setMenu(false);
 
         // Fetch experience and set state for current page when component mounts
         if(!unmounted) {
@@ -15,7 +18,7 @@ const DeveloperExperience = ({ setCurrentPage, experienceRef }) => {
         return () => {
             unmounted = true;
         }
-    }, [setCurrentPage])
+    }, [setCurrentPage, setMenu])
 
     return (
         <div className="site-content">
