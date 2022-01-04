@@ -2,9 +2,12 @@ import { useEffect } from "react";
 
 import ProjectList from "../lists/ProjectList";
 
-const DeveloperWork = ({ setCurrentPage, workRef }) => {
+const DeveloperWork = ({ setCurrentPage, workRef, setMenu }) => {
     useEffect(() => {
         let unmounted = false;
+
+        // Dismiss navbar
+        setMenu(false);
 
         // Fetch work when component mounts
         if(!unmounted) {
@@ -15,7 +18,7 @@ const DeveloperWork = ({ setCurrentPage, workRef }) => {
         return () => {
             unmounted = true;
         }
-    }, [setCurrentPage])
+    }, [setCurrentPage, setMenu])
 
     return (
         <div className="site-content">

@@ -1,10 +1,13 @@
 import { useEffect } from 'react';
 
-const DeveloperAbout = ({ setCurrentPage, aboutRef }) => {
+const DeveloperAbout = ({ setCurrentPage, aboutRef, setMenu }) => {
     useEffect(() => {
          // Set state for current page
          setCurrentPage('about');
-    }, [setCurrentPage])
+
+         // Dismiss navbar
+        setMenu(false);
+    }, [setCurrentPage, setMenu])
 
     return (
         <div className="site-content">
