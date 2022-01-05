@@ -134,7 +134,7 @@ body {
 
                     li {
                         a {
-                            svg {
+                            svg, img {
                                 width: 28px;
                                 height: 28px;
                                 transition: all 0.15s ease-in-out;
@@ -229,6 +229,13 @@ body {
                         h2 {
                             font-size: 30px;
                             font-weight: 400;
+
+                            &.active {
+                                a {
+
+                                    color: rgb(49, 49, 255);
+                                }
+                            }
                         }
                     }
                 }
@@ -243,7 +250,7 @@ body {
 
                     li {
                         a {
-                            svg {
+                            svg, img {
                                 width: 28px;
                                 height: 28px;
                                 transition: all 0.15s ease-in-out;
@@ -286,6 +293,13 @@ body {
                         h2 {
                             font-size: 30px;
                             font-weight: 400;
+
+                            &.active {
+                                a {
+
+                                    color: rgb(49, 49, 255);
+                                }
+                            }
                         }
                     }
                 }
@@ -370,27 +384,36 @@ body {
                             display: flex;
                             flex-flow: column nowrap;
                             gap: 8px;
-                        }
 
-                        p {
-                            font-size: 18px;
-                            line-height: 24.5px;
-                        }
+                            p {
+                                font-size: 18px;
+                                line-height: 24.5px;
 
-                        ul {
-                            display: flex;
-                            line-height: 24.5px;
-                            flex-flow: row wrap;
-                            justify-content: center;
+                                a {
+                                    color: rgb(49, 49, 255);
 
-                            li {
-                                flex-basis: 40%;
-
-                                @media screen and (max-width: 520px) {
-                                    flex-basis: 60%;
+                                    &:hover {
+                                        text-decoration: underline;
+                                    }
+                                }
+                            }
+    
+                            ul {
+                                display: flex;
+                                line-height: 24.5px;
+                                flex-flow: row wrap;
+                                justify-content: center;
+    
+                                li {
+                                    flex-basis: 40%;
+    
+                                    @media screen and (max-width: 520px) {
+                                        flex-basis: 60%;
+                                    }
                                 }
                             }
                         }
+
                     }
 
                     div.projects-list {
