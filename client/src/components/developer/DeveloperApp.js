@@ -9,12 +9,14 @@ import DeveloperWork from "./pages/DeveloperWork";
 import DeveloperCredentials from "./pages/DeveloperCredentials";
 import DeveloperAbout from "./pages/DeveloperAbout";
 import ScrollToTopButton from "./buttons/ScrollToTopButton";
+import DeveloperContact from "./pages/DeveloperContact";
 
 const DeveloperApp = () => {
     const homeRef = useRef(null);
     const workRef = useRef(null);
     const experienceRef = useRef(null);
     const credentialsRef = useRef(null);
+    const contactRef = useRef(null);
     const aboutRef = useRef(null);
 
     const [currentPage, setCurrentPage] = useState("home");
@@ -38,6 +40,10 @@ const DeveloperApp = () => {
             credentialsRef.current.scrollIntoView({ behavior: "smooth" });
         }
 
+        if(currentPage === "contact") {
+            contactRef.current.scrollIntoView({ behavior: "smooth" });
+        }
+
         if(currentPage === "about") {
             aboutRef.current.scrollIntoView({ behavior: "smooth" });
         }
@@ -48,7 +54,7 @@ const DeveloperApp = () => {
             <Header nightMode={ nightMode } menu={ menu } setMenu={ setMenu } />
 
             <div className={ nightMode ? "navbar-content dark" : "navbar-content" }>
-                <Navbar nightMode={ nightMode } setNightMode={ setNightMode } menu={ menu } />
+                <Navbar nightMode={ nightMode } setNightMode={ setNightMode } menu={ menu } currentPage={ currentPage } />
 
                 <main className="site-content-container">
                     <ScrollToTopButton scrollToTop={ scrollToTop } />
@@ -58,6 +64,7 @@ const DeveloperApp = () => {
                         <Route path="/experience" element={<DeveloperExperience setCurrentPage={ setCurrentPage } experienceRef={ experienceRef } setMenu={ setMenu } />} />
                         <Route path="/work" element={<DeveloperWork setCurrentPage={ setCurrentPage } workRef={ workRef } setMenu={ setMenu } />} />
                         <Route path="/credentials" element={<DeveloperCredentials setCurrentPage={ setCurrentPage } credentialsRef={ credentialsRef } setMenu={ setMenu } />} />
+                        <Route path="/contact" element={<DeveloperContact setCurrentPage={ setCurrentPage } contactRef={ contactRef } setMenu={ setMenu } />} />
                         <Route path="/about" element={<DeveloperAbout setCurrentPage={ setCurrentPage } aboutRef={ aboutRef } setMenu={ setMenu } />} />
                     </Routes>
                 </main>

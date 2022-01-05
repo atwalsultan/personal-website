@@ -3,6 +3,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
 
 import SultanPic from "../../../static/sultan-pic.jpg"
+import CodeWars from "../../../static/codewars.svg"
 
 const Header = ({ nightMode, menu, setMenu }) => {
     return (
@@ -29,6 +30,9 @@ const Header = ({ nightMode, menu, setMenu }) => {
                     </li>
                     <li>
                         <a href="https://stackoverflow.com/users/11409321/sultan-singh-atwal" target="_blank" rel="noreferrer" title="Stack Overflow"><FaStackOverflow /></a>
+                    </li>
+                    <li>
+                        <a href="https://www.codewars.com/users/atwalsultan" target="_blank" rel="noreferrer" title="Codewars"><img alt="Codewars" src={ CodeWars } /></a>
                     </li>
                 </ul>
 

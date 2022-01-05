@@ -2,9 +2,10 @@ import { Link } from "react-router-dom";
 // import Switch from "react-switch"
 import { FaLinkedin, FaGithub, FaStackOverflow } from "react-icons/fa";
 
-import { Composer, StackIn } from '../../transitions';
+import { Composer, StackIn } from "../../transitions";
+import CodeWars from "../../../static/codewars.svg";
 
-const Navbar = ({ nightMode, setNightMode, menu }) => {
+const Navbar = ({ nightMode, setNightMode, menu, currentPage }) => {
     return (
         <>
 
@@ -14,11 +15,11 @@ const Navbar = ({ nightMode, setNightMode, menu }) => {
                         transition={StackIn}
                         transitionDuration={200}
                     >
-                        <li><h2><Link to='/dev'>Home</Link></h2></li>
-                        <li><h2><Link to='/dev/work'>My Work</Link></h2></li>
-                        <li><h2><Link to='/dev/experience'>Experience</Link></h2></li>
-                        <li><h2><Link to='/dev/credentials'>Credentials</Link></h2></li>
-                        <li><h2><Link to=''>Contact</Link></h2></li>
+                        <li><h2 className={ currentPage === "home" ? `active` : `inactive` }><Link to='/dev'>Home</Link></h2></li>
+                        <li><h2 className={ currentPage === "work" ? `active` : `inactive` }><Link to='/dev/work'>My Work</Link></h2></li>
+                        <li><h2 className={ currentPage === "experience" ? `active` : `inactive` }><Link to='/dev/experience'>Experience</Link></h2></li>
+                        <li><h2 className={ currentPage === "credentials" ? `active` : `inactive` }><Link to='/dev/credentials'>Credentials</Link></h2></li>
+                        <li><h2 className={ currentPage === "contact" ? `active` : `inactive` }><Link to='/dev/contact'>Contact</Link></h2></li>
                         {/* <li><h2><Link to='/dev/about'>About</Link></h2></li> */}
                     </Composer>
                 </ul>
@@ -63,11 +64,11 @@ const Navbar = ({ nightMode, setNightMode, menu }) => {
 
             <nav className={`site-navbar-small-screen${menu ? '' : ' hidden'}`}>
                 <ul className="nav-links">
-                    <li><h2><Link to='/dev'>Home</Link></h2></li>
-                    <li><h2><Link to='/dev/work'>My Work</Link></h2></li>
-                    <li><h2><Link to='/dev/experience'>Experience</Link></h2></li>
-                    <li><h2><Link to='/dev/credentials'>Credentials</Link></h2></li>
-                    <li><h2><Link to=''>Contact</Link></h2></li>
+                    <li><h2 className={ currentPage === "home" ? `active` : `inactive` }><Link to='/dev'>Home</Link></h2></li>
+                    <li><h2 className={ currentPage === "work" ? `active` : `inactive` }><Link to='/dev/work'>My Work</Link></h2></li>
+                    <li><h2 className={ currentPage === "experience" ? `active` : `inactive` }><Link to='/dev/experience'>Experience</Link></h2></li>
+                    <li><h2 className={ currentPage === "credentials" ? `active` : `inactive` }><Link to='/dev/credentials'>Credentials</Link></h2></li>
+                    <li><h2 className={ currentPage === "contact" ? `active` : `inactive` }><Link to='/dev/contact'>Contact</Link></h2></li>
                     {/* <li><h2><Link to='/dev/about'>About</Link></h2></li> */}
                 </ul>
 
@@ -80,6 +81,9 @@ const Navbar = ({ nightMode, setNightMode, menu }) => {
                     </li>
                     <li>
                         <a href="https://stackoverflow.com/users/11409321/sultan-singh-atwal" target="_blank" rel="noreferrer" title="Stack Overflow"><FaStackOverflow /></a>
+                    </li>
+                    <li>
+                        <a href="https://www.codewars.com/users/atwalsultan" target="_blank" rel="noreferrer" title="Codewars"><img alt="Codewars" src={ CodeWars } /></a>
                     </li>
                 </ul>
             </nav>

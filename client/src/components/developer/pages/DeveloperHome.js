@@ -1,4 +1,7 @@
 import { useEffect } from 'react';
+import { Link } from "react-router-dom";
+
+import Resume from '../../../static/Sultan-Resume-2022.pdf'
 
 const DeveloperHome = ({ setCurrentPage, homeRef, setMenu }) => {
     useEffect(() => {
@@ -17,7 +20,7 @@ const DeveloperHome = ({ setCurrentPage, homeRef, setMenu }) => {
                 <div>
                     <p>
                         Hey there!<br />
-                        Welcome to my Software Development portfolio. I am a meticulous and curious software developer with more than 6 years of programming experience in building real-world, academic and personal projects. I continually push my skills further through self-education and practical activities. My skill set includes, but is not limited to, the following technologies:
+                        Welcome to my Software Development portfolio. I am a meticulous and curious software developer with more than 6 years of programming experience in building real-world, academic and personal projects. I continually push my skills further through self-education and practical activities. My skill set includes the following technologies:
                     </p>
 
                     <ul>
@@ -44,14 +47,11 @@ const DeveloperHome = ({ setCurrentPage, homeRef, setMenu }) => {
                 </div>
 
                 <div>
-                    <p>I designed and developed this website myself and I hope you like it. Please feel free to go over my projects, experience and credentials as a Software Developer. You can reach out to me using my social links or the contact form and you can download my resume here. I look forward to hearing from you soon.</p>
+                    <p>I designed and developed this website myself and I hope you like it. Please feel free to go over my <Link to="/dev/work">projects</Link>, <Link to="/dev/experience">experience</Link> and <Link to="/dev/credentials">credentials</Link>. You can reach out to me using my social links or the <Link to="/dev/contact">contact form</Link> and you can <a href={Resume} target="_blank" rel="noreferrer">download my resume here</a>. I look forward to hearing from you soon.</p>
                 </div>
 
                 <div>
-                    <p>
-                        Cheers!<br />
-                        Sultan
-                    </p>
+                    <p>Cheers!</p>
                 </div>
             </div>
         </div>
