@@ -10,6 +10,7 @@ const certifications = require("./routes/developer/certifications");
 const educations = require("./routes/developer/education");
 const jobs = require("./routes/developer/jobs");
 const projects = require("./routes/developer/projects");
+const developerContact = require("./routes/developer/contact");
 
 // CORS
 const cors = require("cors");
@@ -31,6 +32,7 @@ app.use("/certifications", certifications);
 app.use("/education", educations);
 app.use("/experience", jobs);
 app.use("/work", projects);
+app.use("/developer/contact", developerContact);
 
 // For production environments
 __dirname = path.resolve();

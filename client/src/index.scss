@@ -55,7 +55,7 @@ body {
         color: rgb(20, 20, 20);
     }
 
-    div.hidden {
+    *.hidden {
         opacity: 0;
     }
 
@@ -100,6 +100,7 @@ body {
 
                     img {
                         border-radius: 50%;
+                        transition: all 1s ease-in-out;
                     }
                 }
 
@@ -416,9 +417,9 @@ body {
 
                             button {
                                 background: #355c97;
-                                max-width: 125px;
+                                max-width: 100px;
                                 height: 44px;
-                                border-radius: 22px;
+                                border-radius: 4px;
                                 transition: all 0.2s ease-in-out;
                                 padding: 0;
                                 border: none;
@@ -426,6 +427,14 @@ body {
                                 color: #ffffff;
                                 text-align: center;
                                 font-family: inherit;
+
+                                &:hover {
+                                    cursor: pointer;
+                                }
+
+                                &:active {
+                                    transform: scale(0.9);
+                                }
                             }
 
                             div.label-input {

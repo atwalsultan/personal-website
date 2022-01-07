@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import { FaLinkedin, FaGithub, FaStackOverflow } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
@@ -6,12 +7,20 @@ import SultanPic from "../../../static/sultan-pic.jpg"
 import CodeWars from "../../../static/codewars.svg"
 
 const Header = ({ nightMode, menu, setMenu }) => {
+    const [hidden, setHidden] = useState(true);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setHidden(false);
+        }, 1250)
+    }, [])
+
     return (
         <header className={ nightMode ? "site-header dark" : "site-header" }>
             <div className="header-column-1">
                 <div className="header-logo-container">
                     <a href="/dev">
-                        <img src={ SultanPic } alt="Sultan" />
+                        <img className={`${hidden ? " hidden" : ""}`} src={ SultanPic } alt="Sultan" />
                     </a>
                 </div>
                 <div>
