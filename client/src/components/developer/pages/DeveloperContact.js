@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import ContactCard from '../cards/ContactCard';
 
 const DeveloperContact = ({ setCurrentPage, contactRef, setMenu }) => {
     useEffect(() => {
@@ -12,7 +13,7 @@ const DeveloperContact = ({ setCurrentPage, contactRef, setMenu }) => {
     return (
         <div className="site-content">
             <h2 ref={ contactRef }>Contact</h2>
-            <p>Developer Contact</p>
+            <ContactCard />
         </div>
     )
 }
