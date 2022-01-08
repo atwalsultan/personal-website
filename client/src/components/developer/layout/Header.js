@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react";
 import { FaLinkedin, FaGithub, FaStackOverflow } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 import SultanPic from "../../../static/sultan-pic.jpg"
-import CodeWars from "../../../static/codewars.svg"
+import { ReactComponent as CodeWars } from "../../../static/codewars.svg"
 
 const Header = ({ nightMode, menu, setMenu }) => {
     const [hidden, setHidden] = useState(true);
@@ -19,9 +20,9 @@ const Header = ({ nightMode, menu, setMenu }) => {
         <header className={ nightMode ? "site-header dark" : "site-header" }>
             <div className="header-column-1">
                 <div className="header-logo-container">
-                    <a href="/dev">
+                    <Link to="/dev">
                         <img className={`${hidden ? " hidden" : ""}`} src={ SultanPic } alt="Sultan" />
-                    </a>
+                    </Link>
                 </div>
                 <div>
                     <h1 className="header-name">Sultan Singh Atwal</h1>
@@ -41,7 +42,7 @@ const Header = ({ nightMode, menu, setMenu }) => {
                         <a href="https://stackoverflow.com/users/11409321/sultan-singh-atwal" target="_blank" rel="noreferrer" title="Stack Overflow"><FaStackOverflow /></a>
                     </li>
                     <li>
-                        <a href="https://www.codewars.com/users/atwalsultan" target="_blank" rel="noreferrer" title="Codewars"><img alt="Codewars" src={ CodeWars } /></a>
+                        <a href="https://www.codewars.com/users/atwalsultan" target="_blank" rel="noreferrer" title="Codewars"><CodeWars /></a>
                     </li>
                 </ul>
 
