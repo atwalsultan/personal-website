@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-// import Switch from "react-switch"
+import Switch from "react-switch"
 import { FaLinkedin, FaGithub, FaStackOverflow } from "react-icons/fa";
 
 import { Composer, StackIn } from "../../transitions";
-import CodeWars from "../../../static/codewars.svg";
+import { ReactComponent as CodeWars } from "../../../static/codewars.svg";
 
 const Navbar = ({ nightMode, setNightMode, menu, currentPage }) => {
     return (
@@ -24,7 +24,7 @@ const Navbar = ({ nightMode, setNightMode, menu, currentPage }) => {
                     </Composer>
                 </ul>
 
-                {/* <footer className="navbar-footer">
+                <footer className="navbar-footer">
                     <Switch
                         checked={nightMode}
                         onChange={() => setNightMode(!nightMode)}
@@ -59,7 +59,7 @@ const Navbar = ({ nightMode, setNightMode, menu, currentPage }) => {
                             </div>
                         }
                     />
-                </footer> */}
+                </footer>
             </nav>
 
             <nav className={`site-navbar-small-screen${menu ? '' : ' hidden'}`}>
@@ -83,9 +83,46 @@ const Navbar = ({ nightMode, setNightMode, menu, currentPage }) => {
                         <a href="https://stackoverflow.com/users/11409321/sultan-singh-atwal" target="_blank" rel="noreferrer" title="Stack Overflow"><FaStackOverflow /></a>
                     </li>
                     <li>
-                        <a href="https://www.codewars.com/users/atwalsultan" target="_blank" rel="noreferrer" title="Codewars"><img alt="Codewars" src={ CodeWars } /></a>
+                        <a href="https://www.codewars.com/users/atwalsultan" target="_blank" rel="noreferrer" title="Codewars"><CodeWars /></a>
                     </li>
                 </ul>
+
+                <footer className="navbar-footer">
+                    <Switch
+                        checked={nightMode}
+                        onChange={() => setNightMode(!nightMode)}
+                        offColor="#909090"
+                        onColor="#909090"
+                        height={30}
+                        width={58}
+                        boxShadow="0px 1px 5px rgba(0, 0, 0, 0.6)"
+                        activeBoxShadow="0px 0px 1px 10px rgba(0, 0, 0, 0.2)"
+                        uncheckedIcon={
+                            <div
+                                style={{
+                                    display: "flex",
+                                    justifyContent: "center",
+                                    alignItems: "center",
+                                    height: "100%",
+                                }}
+                            >
+                                <span>🌞</span>
+                            </div>
+                        }
+                        checkedIcon={
+                            <div
+                                style={{
+                                    display: "flex",
+                                    justifyContent: "center",
+                                    alignItems: "center",
+                                    height: "100%",
+                                }}
+                            >
+                                <span>🌜</span>
+                            </div>
+                        }
+                    />
+                </footer>
             </nav>
         </>
     )
