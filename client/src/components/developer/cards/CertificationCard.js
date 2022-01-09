@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
+import { BsBoxArrowUpRight } from "react-icons/bs";
 
 import TechList from "../lists/TechList";
-import PersonalWebsiteIcon from '../../../static/live-site.svg';
 
 const CertificationCard = ({ certification }) => {
     const from = new Date(certification.from);
@@ -40,7 +40,7 @@ const CertificationCard = ({ certification }) => {
             <ul className="links">
                 <li>
                     <a href={ certification.link } target="_blank" rel="noreferrer" title="View credential">
-                        <img src={ PersonalWebsiteIcon } alt="" />
+                        <BsBoxArrowUpRight />
                     </a>
                 </li>
             </ul>

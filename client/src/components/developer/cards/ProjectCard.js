@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { FaGithub } from "react-icons/fa";
+import { BsBoxArrowUpRight } from "react-icons/bs";
 
 import TechList from "../lists/TechList";
-import PersonalWebsiteIcon from '../../../static/live-site.svg';
 
 const ProjectCard = ({ project }) => {
     const from = new Date(project.from);
@@ -43,7 +43,7 @@ const ProjectCard = ({ project }) => {
 
             <ul className="links">
                 { links !== null && links.github !== "" && <li><a href={ links.github } target="_blank" rel="noreferrer" title="View source code"><FaGithub /></a></li> }
-                { links !== null && links.live !== "" && <li><a href={ links.live } target="_blank" rel="noreferrer" title="View live deployment"><img src={ PersonalWebsiteIcon } alt={ `Live deployment for ${project.name}` } /></a></li> }
+                { links !== null && links.live !== "" && <li><a href={ links.live } target="_blank" rel="noreferrer" title="View live deployment"><BsBoxArrowUpRight /></a></li> }
             </ul>
         </div>
     )

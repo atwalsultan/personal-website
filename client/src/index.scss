@@ -220,7 +220,7 @@ body {
 
                                 &.active {
                                     a {
-                                        color: #355c97;
+                                        color: #bdd237;
                                     }
                                 }
                             }
@@ -234,7 +234,6 @@ body {
                             fill: #fff;
                         }
                     }
-
                 }
 
                 nav.site-navbar {
@@ -253,8 +252,170 @@ body {
 
                                 &.active {
                                     a {
-                                        color: #355c97;
+                                        color: #bdd237;
                                         // color: #bdd237;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                main.site-content-container {
+                    background-color: #303133;
+
+                    div.scroll-to-top-button {
+                        -webkit-box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.04);
+                        box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.04);
+                        background-color: #bdd237;
+
+                        svg {
+                            fill: #222;
+                        }
+                    }
+
+                    div.site-content {
+                        h2 {
+                            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+                            color: #fff;
+                        }
+
+                        div.contact-card {
+                            -webkit-box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.04);
+                            box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.04);
+                            background-color: #222;
+
+                            form.contact-form {
+                                label, input, textarea {
+                                    color: #fff;
+                                }
+
+                                input,
+                                textarea {
+                                    background-color: #303133;
+                                }
+
+                                button {
+                                    background: #bdd237;
+                                    color: #222;
+                                }
+                            }
+                        }
+
+                        div.intro-card {
+                            -webkit-box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.04);
+                            box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.04);
+                            background-color: #222;
+
+                            p, li {
+                                color: #fff;
+                                
+                                a {
+                                    color: #bdd237;
+                                }
+                            }
+
+                        }
+
+                        div.projects-list {
+                            div.project-card {
+                                -webkit-box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.04);
+                                box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.04);
+                                background-color: #222;
+
+                                h4, p {
+                                    color: #fff;
+                                }
+
+                                div.name-location {
+                                    h3 {
+                                        color: #bdd237;
+                                    }
+                                }
+
+                                ul.tech-used {
+                                    li {
+                                        border: 1px solid rgba(255, 255, 255, 0.15);
+                                        background-color: #303133;
+                                        color: #fff;
+                                    }
+                                }
+
+                                ul.links {
+                                    li {
+                                        svg {
+                                            color: #fff;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        div.job-list {
+                            div.job-card {
+                                -webkit-box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.04);
+                                box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.04);
+                                background-color: #222;
+
+                                h4, p {
+                                    color: #fff;
+                                }
+
+                                div.company-location {
+                                    h3 {
+                                        color: #bdd237;
+                                    }
+                                }
+
+                                ul.tech-used {
+                                    li {
+                                        border: 1px solid rgba(255, 255, 255, 0.15);
+                                        background-color: #303133;
+                                        color: #fff;
+                                    }
+                                }
+                            }
+                        }
+
+                        div.degrees-list {
+                            div.degree-card {
+                                -webkit-box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.04);
+                                box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.04);
+                                background-color: #222;
+
+                                h4, p, li {
+                                    color: #fff;
+                                }
+
+                                div.institution-location {
+                                    h3 {
+                                        color: #bdd237;
+                                    }
+                                }
+                            }
+                        }
+
+                        div.certifications-list {
+                            div.certification-card {
+                                -webkit-box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.04);
+                                box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.04);
+                                background-color: #222;
+
+                                h4, p, li, svg {
+                                    color: #fff;
+                                }
+
+                                div.name-location {
+                                    h3 {
+                                        color: #bdd237;
+                                    }
+                                }
+
+                                ul.tech-used {
+                                    li {
+                                        border: 1px solid rgba(255, 255, 255, 0.15);
+                                        background-color: #303133;
+                                        color: #fff;
                                     }
                                 }
                             }
@@ -417,6 +578,7 @@ body {
                 height: 86vh;
                 overflow-y: scroll;
                 padding: 0 30px 30px 30px;
+                background-color: #f1f3f8;
 
                 @media screen and (max-width: 600px) {
                     height: 88vh;
