@@ -4,9 +4,7 @@ import { BsBoxArrowUpRight } from "react-icons/bs";
 import TechList from "../lists/TechList";
 
 const CertificationCard = ({ certification }) => {
-    const from = new Date(certification.from);
     const to = new Date(certification.to);
-
     const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     
     const [hidden, setHidden] = useState(true);
@@ -26,7 +24,7 @@ const CertificationCard = ({ certification }) => {
 
             <div className="institution-dates">
                 <h4>{ certification.institution }</h4>
-                { (from.getMonth() === to.getMonth() && from.getFullYear() === to.getFullYear()) ? <h4>{ months[from.getMonth()]} { from.getFullYear() }</h4> : <h4>{ months[from.getMonth()]} { from.getFullYear() } - { months[to.getMonth()] } { to.getFullYear() }</h4> }
+                { <h4>{ months[to.getMonth()] } { to.getFullYear() }</h4> }
             </div>
 
             <div className="description">
@@ -39,9 +37,9 @@ const CertificationCard = ({ certification }) => {
 
             <ul className="links">
                 <li>
-                    <a href={ certification.link } target="_blank" rel="noreferrer" title="View credential">
+                    { certification.link !== "" && <a href={ certification.link } target="_blank" rel="noreferrer" title="View credential">
                         <BsBoxArrowUpRight />
-                    </a>
+                    </a> }
                 </li>
             </ul>
         </div>
