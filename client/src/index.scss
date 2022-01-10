@@ -1203,6 +1203,8 @@ body {
                             ul.links {
                                 display: flex;
                                 flex-flow: row-reverse nowrap;
+                                flex-grow: 1;
+                                align-items: flex-end;
                                 gap: 6px;
                                 list-style-type: none;
 
