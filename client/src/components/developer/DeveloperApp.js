@@ -20,7 +20,7 @@ const DeveloperApp = () => {
     const aboutRef = useRef(null);
 
     const [currentPage, setCurrentPage] = useState("home");
-    const [nightMode, setNightMode] = useState(false);
+    const [nightMode, setNightMode] = useState(true);
     const [menu, setMenu] = useState(false);
 
     const scrollToTop = () => {
