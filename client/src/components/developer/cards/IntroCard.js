@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import Resume from '../../../static/Sultan-Resume-2022.pdf'
+import Resume from '../../../static/Sultan-Resume-2022.pdf';
 
 const IntroCard = () => {
     const [hidden, setHidden] = useState(true);
