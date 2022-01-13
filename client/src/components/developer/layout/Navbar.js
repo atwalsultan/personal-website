@@ -6,6 +6,11 @@ import { Composer, StackIn } from "../../transitions";
 import { ReactComponent as CodeWars } from "../../../static/codewars.svg";
 
 const Navbar = ({ nightMode, setNightMode, menu, currentPage }) => {
+    const handleSwitchToggle = () => {
+        setNightMode(!nightMode);
+        localStorage.setItem("nightMode", JSON.stringify(!nightMode));
+    }
+
     return (
         <>
 
@@ -27,7 +32,7 @@ const Navbar = ({ nightMode, setNightMode, menu, currentPage }) => {
                 <footer className="navbar-footer">
                     <Switch
                         checked={nightMode}
-                        onChange={() => setNightMode(!nightMode)}
+                        onChange={handleSwitchToggle}
                         offColor="#909090"
                         onColor="#909090"
                         height={30}
@@ -90,7 +95,7 @@ const Navbar = ({ nightMode, setNightMode, menu, currentPage }) => {
                 <footer className="navbar-footer">
                     <Switch
                         checked={nightMode}
-                        onChange={() => setNightMode(!nightMode)}
+                        onChange={handleSwitchToggle}
                         offColor="#909090"
                         onColor="#909090"
                         height={30}
