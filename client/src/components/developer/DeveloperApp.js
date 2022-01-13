@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 
 import Header from "./layout/Header";
@@ -22,6 +22,15 @@ const DeveloperApp = () => {
     const [currentPage, setCurrentPage] = useState("home");
     const [nightMode, setNightMode] = useState(true);
     const [menu, setMenu] = useState(false);
+
+    useEffect(() => {
+        const savedMode = localStorage.getItem("nightMode");
+        const savedModeJSON = JSON.parse(savedMode);
+        
+        if(savedModeJSON !== null) {
+            setNightMode(savedModeJSON);
+        }
+    }, []);
 
     const scrollToTop = () => {
         if(currentPage === "home") {
