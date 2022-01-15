@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Switch from "react-switch"
-import { FaLinkedin, FaGithub, FaStackOverflow } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaStackOverflow, FaSun, FaMoon } from "react-icons/fa";
 
 import { Composer, StackIn } from "../../transitions";
 import { ReactComponent as CodeWars } from "../../../static/codewars.svg";
@@ -33,8 +33,8 @@ const Navbar = ({ nightMode, setNightMode, menu, currentPage }) => {
                     <Switch
                         checked={nightMode}
                         onChange={handleSwitchToggle}
-                        offColor="#909090"
-                        onColor="#909090"
+                        offColor="#e5e5e5"
+                        onColor="#b2b2b2"
                         height={30}
                         width={58}
                         boxShadow="0px 1px 5px rgba(0, 0, 0, 0.6)"
@@ -48,7 +48,7 @@ const Navbar = ({ nightMode, setNightMode, menu, currentPage }) => {
                                     height: "100%",
                                 }}
                             >
-                                <span>🌞</span>
+                                <span><FaSun color="#242323" /></span>
                             </div>
                         }
                         checkedIcon={
@@ -60,7 +60,7 @@ const Navbar = ({ nightMode, setNightMode, menu, currentPage }) => {
                                     height: "100%",
                                 }}
                             >
-                                <span>🌜</span>
+                                <span><FaMoon color="#242323" /></span>
                             </div>
                         }
                     />
@@ -96,8 +96,8 @@ const Navbar = ({ nightMode, setNightMode, menu, currentPage }) => {
                     <Switch
                         checked={nightMode}
                         onChange={handleSwitchToggle}
-                        offColor="#909090"
-                        onColor="#909090"
+                        offColor="#e5e5e5"
+                        onColor="#b2b2b2"
                         height={30}
                         width={58}
                         boxShadow="0px 1px 5px rgba(0, 0, 0, 0.6)"
@@ -111,7 +111,7 @@ const Navbar = ({ nightMode, setNightMode, menu, currentPage }) => {
                                     height: "100%",
                                 }}
                             >
-                                <span>🌞</span>
+                                <span><FaSun color="#242323" /></span>
                             </div>
                         }
                         checkedIcon={
@@ -123,7 +123,7 @@ const Navbar = ({ nightMode, setNightMode, menu, currentPage }) => {
                                     height: "100%",
                                 }}
                             >
-                                <span>🌜</span>
+                                <span><FaMoon color="#242323" /></span>
                             </div>
                         }
                     />
