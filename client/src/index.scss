@@ -1,5 +1,3 @@
-// @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
-// @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500&family=Roboto:ital,wght@0,400;0,500;1,700&display=swap');
 
 * {
@@ -75,7 +73,7 @@ body {
             box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.06);
 
             &.dark {
-                background-color: #222;
+                background-color: #242323;
                 -webkit-box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.01);
                 box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.01);
 
@@ -181,8 +179,8 @@ body {
                     }
 
                     svg {
-                        width: 35px;
-                        height: 35px;
+                        width: 32px;
+                        height: 32px;
                         transition: all 0.15s ease-in-out;
 
                         &:hover {
@@ -218,9 +216,7 @@ body {
                                 }
 
                                 &.active {
-                                    a {
-                                        color: #bdd237;
-                                    }
+                                    font-weight: 500;
                                 }
                             }
                         }
@@ -236,7 +232,7 @@ body {
                 }
 
                 nav.site-navbar {
-                    background-color: #222;
+                    background-color: #242323;
                     -webkit-box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.01);
                     box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.01);
 
@@ -251,7 +247,7 @@ body {
 
                                 &.active {
                                     a {
-                                        color: #bdd237;
+                                        font-weight: 500;
                                     }
                                 }
                             }
@@ -260,7 +256,7 @@ body {
                 }
 
                 main.site-content-container {
-                    background-color: #303133;
+                    background-color: #363636;
 
                     div.scroll-to-top-button {
                         -webkit-box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.01);
@@ -268,7 +264,7 @@ body {
                         background-color: #bdd237;
 
                         svg {
-                            fill: #222;
+                            fill: #242323;
                         }
                     }
 
@@ -281,7 +277,7 @@ body {
                         div.contact-card {
                             -webkit-box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.01);
                             box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.01);
-                            background-color: #222;
+                            background-color: #242323;
 
                             form.contact-form {
                                 label, input, textarea {
@@ -295,7 +291,7 @@ body {
 
                                 button {
                                     background: #bdd237;
-                                    color: #222;
+                                    color: #242323;
                                 }
                             }
                         }
@@ -303,38 +299,46 @@ body {
                         div.intro-card {
                             -webkit-box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.01);
                             box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.01);
-                            background-color: #222;
+                            background-color: #242323;
 
                             p, li {
-                                color: #fff;
-                                
-                                a {
-                                    color: #bdd237;
-                                }
+                                color: #fff;                                
                             }
 
+                            a {
+                                color: #bdd237;
+                            }
                         }
 
                         div.projects-list {
                             div.project-card {
                                 -webkit-box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.01);
                                 box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.01);
-                                background-color: #222;
+                                background-color: #242323;
 
-                                h4, p {
+                                h3, p {
                                     color: #fff;
                                 }
 
                                 div.name-location {
-                                    h3 {
+                                    h4 {
+                                        color: #bcbcbc;
+                                    }
+                                }
+
+                                div.role-dates {
+                                    h4:first-of-type {
                                         color: #bdd237;
+                                    }
+
+                                    h4:last-of-type {
+                                        color: #bcbcbc;
                                     }
                                 }
 
                                 ul.tech-used {
                                     li {
-                                        border: 1px solid rgba(255, 255, 255, 0.15);
-                                        background-color: #303133;
+                                        background-color: #576403;
                                         color: #fff;
                                     }
                                 }
@@ -353,22 +357,31 @@ body {
                             div.job-card {
                                 -webkit-box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.01);
                                 box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.01);
-                                background-color: #222;
+                                background-color: #242323;
 
-                                h4, p {
+                                h3, p {
                                     color: #fff;
                                 }
 
                                 div.company-location {
-                                    h3 {
+                                    h4 {
+                                        color: #bcbcbc;
+                                    }
+                                }
+
+                                div.role-dates {
+                                    h4:first-of-type {
                                         color: #bdd237;
+                                    }
+
+                                    h4:last-of-type {
+                                        color: #bcbcbc;
                                     }
                                 }
 
                                 ul.tech-used {
                                     li {
-                                        border: 1px solid rgba(255, 255, 255, 0.15);
-                                        background-color: #303133;
+                                        background-color: #576403;
                                         color: #fff;
                                     }
                                 }
@@ -379,15 +392,25 @@ body {
                             div.degree-card {
                                 -webkit-box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.01);
                                 box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.01);
-                                background-color: #222;
+                                background-color: #242323;
 
-                                h4, p, li {
+                                h3, p, li {
                                     color: #fff;
                                 }
 
                                 div.institution-location {
-                                    h3 {
+                                    h4 {
+                                        color: #bcbcbc;
+                                    }
+                                }
+
+                                div.program-dates {
+                                    h4:first-of-type {
                                         color: #bdd237;
+                                    }
+
+                                    h4:last-of-type {
+                                        color: #bcbcbc;
                                     }
                                 }
                             }
@@ -397,22 +420,31 @@ body {
                             div.certification-card {
                                 -webkit-box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.01);
                                 box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.01);
-                                background-color: #222;
+                                background-color: #242323;
 
-                                h4, p, li, svg {
+                                h3, p, li, svg {
                                     color: #fff;
                                 }
 
                                 div.name-location {
-                                    h3 {
+                                    h4 {
+                                        color: #bcbcbc;
+                                    }
+                                }
+
+                                div.institution-dates {
+                                    h4:first-of-type {
                                         color: #bdd237;
+                                    }
+
+                                    h4:last-of-type {
+                                        color: #bcbcbc;
                                     }
                                 }
 
                                 ul.tech-used {
                                     li {
-                                        border: 1px solid rgba(255, 255, 255, 0.15);
-                                        background-color: #303133;
+                                        background-color: #576403;
                                         color: #fff;
                                     }
                                 }
@@ -436,7 +468,7 @@ body {
                 z-index: 1050;
                 display: flex;
                 flex-flow: column nowrap;
-                gap: 24px;
+                gap: 30px;
                 font-size: 28px;
                 color: #ececec;
                 transition: all 0.5s ease-in-out;
@@ -467,7 +499,7 @@ body {
 
                     li {
                         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-                        padding: 8px;
+                        padding: 12px;
 
                         h2 {
                             font-size: 30px;
@@ -475,8 +507,6 @@ body {
 
                             &.active {
                                 a {
-                                    // color: #355c97;
-                                    // text-decoration: underline;
                                     font-weight: 500;
                                 }
                             }
@@ -520,7 +550,10 @@ body {
                     padding-bottom: 8px;
 
                     span {
-                        font-size: 18px;
+                        svg {
+                            height: 16px;
+                            width: 16px;
+                        }
                     }
                 }
             }
@@ -547,7 +580,7 @@ body {
 
                     li {
                         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-                        padding: 8px 50px 8px 8px;
+                        padding: 16px;
 
                         h2 {
                             font-size: 26px;
@@ -569,6 +602,14 @@ body {
                     justify-content: center;
                     align-items: center;
                     padding-bottom: 8px;
+
+                    span {
+                        svg {
+                            margin-top: 3.5px;
+                            height: 16px;
+                            width: 16px;
+                        }
+                    }
                 }
             }
 
@@ -577,7 +618,8 @@ body {
                 height: 86vh;
                 overflow-y: scroll;
                 padding: 0 30px 30px 30px;
-                background-color: #f1f3f8;
+                // background-color: #f1f3f8;
+                background-color: #f4f4f4;
 
                 @media screen and (max-width: 600px) {
                     height: 88vh;
@@ -614,7 +656,7 @@ body {
                     display: flex;
                     flex-flow: column nowrap;
                     gap: 30px;
-                    padding-top: 40px;
+                    padding-top: 32px;
 
                     @media screen and (max-width: 600px) {
                         gap: 20px;
@@ -749,7 +791,8 @@ body {
                                 font-weight: 300;
 
                                 a {
-                                    font-weight: 400;
+                                    // font-weight: 400;
+                                    color: #355c97;
 
                                     &:hover {
                                         text-decoration: underline;
@@ -874,10 +917,9 @@ body {
                                 margin: 10px 0 15px 0;
 
                                 li {
-                                    padding: 4px 6px;
-                                    border: 1px solid rgba(80, 80, 80, 0.3);
-                                    background-color: #f4f4f4;
-                                    border-radius: 4px;
+                                    padding: 4px 10px;
+                                    background-color: rgba(210, 221, 239, 0.38);
+                                    border-radius: 14px;
                                 }
                             }
 
@@ -1006,10 +1048,9 @@ body {
                                 margin-top: 10px;
 
                                 li {
-                                    padding: 4px 6px;
-                                    border: 1px solid rgba(80, 80, 80, 0.3);
-                                    background-color: #f4f4f4;
-                                    border-radius: 4px;
+                                    padding: 4px 10px;
+                                    background-color: rgba(210, 221, 239, 0.38);
+                                    border-radius: 14px;
                                 }
                             }
                         }
@@ -1216,10 +1257,9 @@ body {
                                 margin-top: 10px;
 
                                 li {
-                                    padding: 4px 6px;
-                                    border: 1px solid rgba(80, 80, 80, 0.3);
-                                    background-color: #f4f4f4;
-                                    border-radius: 4px;
+                                    padding: 4px 10px;
+                                    background-color: rgba(210, 221, 239, 0.38);
+                                    border-radius: 14px;
                                 }
                             }
 
