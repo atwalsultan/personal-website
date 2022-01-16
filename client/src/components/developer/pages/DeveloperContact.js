@@ -12,7 +12,7 @@ const DeveloperContact = ({ setCurrentPage, contactRef, setMenu }) => {
 
     return (
         <div className="site-content">
-            <h2 ref={ contactRef } className="small-screen-hidden">Contact</h2>
+            <h2 ref={ contactRef } className="large-screen-hidden">Contact</h2>
             <ContactCard />
         </div>
     )
