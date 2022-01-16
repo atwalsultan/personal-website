@@ -13,7 +13,7 @@ const DeveloperHome = ({ setCurrentPage, homeRef, setMenu }) => {
 
     return (
         <div className="site-content">
-            <h2 ref={homeRef} className="small-screen-hidden">Home</h2>
+            <h2 ref={homeRef} className="large-screen-hidden">Home</h2>
             <IntroCard />
         </div>
     )
