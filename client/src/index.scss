@@ -208,8 +208,6 @@ body {
 
                     ul.nav-links {
                         li {
-                            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-
                             h2 {
                                 a {
                                     color: #fff;
@@ -238,8 +236,6 @@ body {
 
                     ul {
                         li {
-                            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-
                             h2 {
                                 a {
                                     color: #fff;
@@ -498,8 +494,7 @@ body {
                     }
 
                     li {
-                        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-                        padding: 12px;
+                        padding: 16px;
 
                         h2 {
                             font-size: 30px;
@@ -579,8 +574,7 @@ body {
                     margin: auto;
 
                     li {
-                        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-                        padding: 16px;
+                        padding: 20px;
 
                         h2 {
                             font-size: 26px;
@@ -880,8 +874,7 @@ body {
                                 flex-flow: row nowrap;
                                 justify-content: space-between;
                                 gap: 8px;
-                                margin-top: 5px;
-                                margin-bottom: 10px;
+                                margin: 16px 0;
 
                                 @media screen and (max-width: 420px) {
                                     flex-flow: column nowrap;
@@ -911,10 +904,9 @@ body {
                             ul.tech-used {
                                 display: flex;
                                 flex-flow: row wrap;
-                                column-gap: 6px;
-                                row-gap: 6px;
+                                gap: 8px;
                                 list-style-type: none;
-                                margin: 10px 0 15px 0;
+                                margin: 24px 0 16px 0;
 
                                 li {
                                     padding: 4px 10px;
@@ -924,7 +916,6 @@ body {
                             }
 
                             ul.links {
-                                margin-top: 16px;
                                 display: flex;
                                 flex-flow: row-reverse nowrap;
                                 gap: 8px;
@@ -1012,8 +1003,7 @@ body {
                                 flex-flow: row nowrap;
                                 justify-content: space-between;
                                 gap: 8px;
-                                margin-top: 5px;
-                                margin-bottom: 10px;
+                                margin: 16px 0;
 
                                 @media screen and (max-width: 420px) {
                                     flex-flow: column nowrap;
@@ -1042,10 +1032,9 @@ body {
                             ul.tech-used {
                                 display: flex;
                                 flex-flow: row wrap;
-                                column-gap: 6px;
-                                row-gap: 6px;
+                                gap: 8px;
                                 list-style-type: none;
-                                margin-top: 10px;
+                                margin: 24px 0 8px 0;
 
                                 li {
                                     padding: 4px 10px;
@@ -1130,8 +1119,7 @@ body {
                                 flex-flow: row nowrap;
                                 justify-content: space-between;
                                 gap: 8px;
-                                margin-top: 5px;
-                                margin-bottom: 10px;
+                                margin: 16px 0;
 
                                 @media screen and (max-width: 535px) {
                                     flex-flow: column nowrap;
@@ -1221,8 +1209,7 @@ body {
                                 flex-flow: row nowrap;
                                 justify-content: space-between;
                                 gap: 8px;
-                                margin-top: 5px;
-                                margin-bottom: 10px;
+                                margin: 16px 0;
 
                                 @media screen and (max-width: 500px) {
                                     flex-flow: column nowrap;
@@ -1241,6 +1228,8 @@ body {
                             }
 
                             div.description {
+                                margin-bottom: 24px;
+
                                 p {
                                     font-size: 18px;
                                     line-height: 1.56;
@@ -1251,10 +1240,9 @@ body {
                             ul.tech-used {
                                 display: flex;
                                 flex-flow: row wrap;
-                                column-gap: 6px;
-                                row-gap: 6px;
+                                gap: 8px;
                                 list-style-type: none;
-                                margin-top: 10px;
+                                margin-bottom: 16px;
 
                                 li {
                                     padding: 4px 10px;
@@ -1264,7 +1252,6 @@ body {
                             }
 
                             ul.links {
-                                margin-top: 16px;
                                 display: flex;
                                 flex-flow: row-reverse nowrap;
                                 flex-grow: 1;
