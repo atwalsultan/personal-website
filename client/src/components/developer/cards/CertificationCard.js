@@ -46,9 +46,11 @@ const CertificationCard = ({ certification }) => {
                 <p>{ certification.description }</p>
             </div>
 
-            <ul className="tech-used">
-                <TechList list={ certification.tech } />
-            </ul>
+            { certification.tech.length > 0 && 
+                <ul className="tech-used">
+                    <TechList list={ certification.tech } />
+                </ul> 
+            }
 
             <ul className="links">
                 <li>
