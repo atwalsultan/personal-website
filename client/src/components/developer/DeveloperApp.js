@@ -3,13 +3,11 @@ import { Route, Routes } from "react-router-dom";
 
 import Header from "./layout/Header";
 import Navbar from "./layout/Navbar";
-import DeveloperHome from "./pages/DeveloperHome";
 import DeveloperExperience from "./pages/DeveloperExperience";
 import DeveloperWork from "./pages/DeveloperWork";
 import DeveloperCredentials from "./pages/DeveloperCredentials";
 import DeveloperAbout from "./pages/DeveloperAbout";
 import ScrollToTopButton from "./buttons/ScrollToTopButton";
-import DeveloperContact from "./pages/DeveloperContact";
 
 const DeveloperApp = () => {
     const homeRef = useRef(null);
@@ -33,10 +31,6 @@ const DeveloperApp = () => {
     }, []);
 
     const scrollToTop = () => {
-        if(currentPage === "home") {
-            homeRef.current.scrollIntoView({ behavior: "smooth" });
-        }
-
         if(currentPage === "work") {
             workRef.current.scrollIntoView({ behavior: "smooth" });
         }
@@ -47,10 +41,6 @@ const DeveloperApp = () => {
 
         if(currentPage === "credentials") {
             credentialsRef.current.scrollIntoView({ behavior: "smooth" });
-        }
-
-        if(currentPage === "contact") {
-            contactRef.current.scrollIntoView({ behavior: "smooth" });
         }
 
         if(currentPage === "about") {
@@ -69,12 +59,10 @@ const DeveloperApp = () => {
                     <ScrollToTopButton scrollToTop={ scrollToTop } />
 
                     <Routes>
-                        <Route path="/" element={<DeveloperHome setCurrentPage={ setCurrentPage } homeRef={ homeRef } setMenu={ setMenu } />} />
+                        <Route path="/" element={<DeveloperWork setCurrentPage={ setCurrentPage } workRef={ workRef } setMenu={ setMenu } />} />
                         <Route path="/experience" element={<DeveloperExperience setCurrentPage={ setCurrentPage } experienceRef={ experienceRef } setMenu={ setMenu } />} />
-                        <Route path="/work" element={<DeveloperWork setCurrentPage={ setCurrentPage } workRef={ workRef } setMenu={ setMenu } />} />
                         <Route path="/credentials" element={<DeveloperCredentials setCurrentPage={ setCurrentPage } credentialsRef={ credentialsRef } setMenu={ setMenu } />} />
-                        <Route path="/contact" element={<DeveloperContact setCurrentPage={ setCurrentPage } contactRef={ contactRef } setMenu={ setMenu } />} />
-                        <Route path="/about" element={<DeveloperAbout setCurrentPage={ setCurrentPage } aboutRef={ aboutRef } setMenu={ setMenu } />} />
+                        <Route path="/about" element={<DeveloperAbout setCurrentPage={ setCurrentPage } aboutRef={ aboutRef } contactRef={ contactRef } setMenu={ setMenu } />} />
                     </Routes>
                 </main>
             </div>

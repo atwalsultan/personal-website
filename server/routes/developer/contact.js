@@ -51,7 +51,7 @@ router.post("/", urlEncodedParser, (req, res) => {
         }
     });
 
-    res.redirect('/dev/contact');
+    res.redirect('/dev/about');
 });
 
 module.exports = router;
