@@ -26,7 +26,7 @@ const Header = ({ nightMode, menu, setMenu }) => {
                 </div>
                 <div>
                     <h1 className="header-name">Sultan Singh Atwal</h1>
-                    <h2 className="header-role">Full Stack Software Developer</h2>
+                    <h2 className="header-role">Software Developer</h2>
                 </div>
             </div>
 
