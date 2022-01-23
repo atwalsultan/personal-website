@@ -31,7 +31,7 @@ const CertificationCard = ({ certification }) => {
     }, [])
 
     return (
-        <div className={`certification-card${hidden ? " hidden" : ""}`}>
+        <div className={`card certification-card${hidden ? " hidden" : ""}`}>
             <div className="name-location">
                 <h3>{ certification.name }</h3>
                 <h4>{ certification.location }</h4>

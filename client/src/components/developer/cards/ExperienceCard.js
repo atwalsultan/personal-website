@@ -17,7 +17,7 @@ const ExperienceCard = ({ job }) => {
     }, [])
    
     return (
-        <div className={`job-card${hidden ? " hidden" : ""}`}>
+        <div className={`card job-card${hidden ? " hidden" : ""}`}>
             <div className="company-location">
                 <h3>{ job.company }</h3>
                 <h4>{ job.location }</h4>

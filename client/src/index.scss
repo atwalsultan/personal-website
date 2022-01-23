@@ -270,77 +270,57 @@ body {
                             color: #fff;
                         }
 
-                        div.contact-card {
+                        div.card {
                             -webkit-box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.01);
                             box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.01);
                             background-color: #242323;
 
-                            form.contact-form {
-                                label, input, textarea {
-                                    color: #fff;
-                                }
-
-                                input,
-                                textarea {
-                                    background-color: #303133;
-                                }
-
-                                button {
-                                    background: #bdd237;
-                                    color: #363636;
+                            &.contact-card {
+                                form.contact-form {
+                                    label, input, textarea {
+                                        color: #fff;
+                                    }
+    
+                                    input,
+                                    textarea {
+                                        background-color: #303133;
+                                    }
+    
+                                    button {
+                                        background: #bdd237;
+                                        color: #363636;
+                                    }
                                 }
                             }
-                        }
 
-                        div.about-list {
-                            div.intro-card, div.skills-card, div.opportunities-card {
-                                -webkit-box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.01);
-                                box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.01);
-                                background-color: #242323;
-    
-                                p, li {
-                                    color: #fff;                                
-                                }
-    
-                                a {
-                                    color: #bdd237;
-                                }
-                            }
-                        }
-
-                        div.projects-list {
-                            div.project-card {
-                                -webkit-box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.01);
-                                box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.01);
-                                background-color: #242323;
-
+                            &.project-card {
                                 h3, p {
                                     color: #fff;
                                 }
-
+    
                                 div.name-location {
                                     h4 {
                                         color: #bcbcbc;
                                     }
                                 }
-
+    
                                 div.role-dates {
                                     h4:first-of-type {
                                         color: #bdd237;
                                     }
-
+    
                                     h4:last-of-type {
                                         color: #bcbcbc;
                                     }
                                 }
-
+    
                                 ul.tech-used {
                                     li {
                                         background-color: #576403;
                                         color: #fff;
                                     }
                                 }
-
+    
                                 ul.links {
                                     li {
                                         svg {
@@ -349,34 +329,28 @@ body {
                                     }
                                 }
                             }
-                        }
 
-                        div.job-list {
-                            div.job-card {
-                                -webkit-box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.01);
-                                box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.01);
-                                background-color: #242323;
-
+                            &.job-card {
                                 h3, p {
                                     color: #fff;
                                 }
-
+    
                                 div.company-location {
                                     h4 {
                                         color: #bcbcbc;
                                     }
                                 }
-
+    
                                 div.role-dates {
                                     h4:first-of-type {
                                         color: #bdd237;
                                     }
-
+    
                                     h4:last-of-type {
                                         color: #bcbcbc;
                                     }
                                 }
-
+    
                                 ul.tech-used {
                                     li {
                                         background-color: #576403;
@@ -384,14 +358,8 @@ body {
                                     }
                                 }
                             }
-                        }
 
-                        div.degrees-list {
-                            div.degree-card {
-                                -webkit-box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.01);
-                                box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.01);
-                                background-color: #242323;
-
+                            &.degree-card {
                                 h3, p, li {
                                     color: #fff;
                                 }
@@ -412,14 +380,8 @@ body {
                                     }
                                 }
                             }
-                        }
 
-                        div.certifications-list {
-                            div.certification-card {
-                                -webkit-box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.01);
-                                box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.01);
-                                background-color: #242323;
-
+                            &.certification-card {
                                 h3, p, li, svg {
                                     color: #fff;
                                 }
@@ -445,6 +407,22 @@ body {
                                         background-color: #576403;
                                         color: #fff;
                                     }
+                                }
+                            }
+                        }
+
+                        div.about-list {
+                            div.intro-card, div.skills-card, div.opportunities-card {
+                                -webkit-box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.01);
+                                box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.01);
+                                background-color: #242323;
+    
+                                p, li {
+                                    color: #fff;                                
+                                }
+    
+                                a {
+                                    color: #bdd237;
                                 }
                             }
                         }
@@ -672,195 +650,102 @@ body {
                         }
                     }
 
-                    div.contact-card {
+                    div.card {
                         padding: 15px;
                         flex-grow: 1;
                         border-radius: 5px;
                         display: flex;
                         flex-flow: column nowrap;
-                        gap: 16px;
-                        width: 700px;
                         -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.06);
                         box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.06);
                         background-color: #fff;
                         transition: all 1s ease-in-out;
-
-                        @media screen and (max-width: 1050px) {
-                            width: 100%;
-                        }
-                        margin: auto;
-
-                        form.contact-form {
-                            display: flex;
-                            flex-flow: column nowrap;
+                        
+                        &.contact-card {
                             gap: 16px;
+                            width: 700px;
+                            margin: auto;
 
-                            label {
-                                font-size: 22px;
-                                font-weight: 300;
-                                color: #141414;
+                            @media screen and (max-width: 1050px) {
+                                width: 100%;
                             }
-
-                            input,
-                            textarea {
-                                height: 40px;
-                                border-radius: 4px;
-                                font-size: 20px;
-                                font-family: inherit;
-                                padding: 8px;
-                                border: none;
-                                outline: none;
-                                background-color: #f1f3f8;
-                            }
-
-                            textarea {
-                                height: 200px;
-                                resize: none;
-                            }
-
-                            button {
-                                background: #355c97;
-                                max-width: 100px;
-                                height: 44px;
-                                border-radius: 4px;
-                                transition: all 0.2s ease-in-out;
-                                padding: 0;
-                                border: none;
-                                font-size: 20px;
-                                color: #ffffff;
-                                text-align: center;
-                                font-family: inherit;
-
-                                &:hover {
-                                    cursor: pointer;
-                                }
-
-                                &:active {
-                                    transform: scale(0.9);
-                                }
-                            }
-
-                            div.label-input {
+    
+                            form.contact-form {
                                 display: flex;
                                 flex-flow: column nowrap;
-                                gap: 8px;
-                            }
-
-                            div.first-row {
-                                display: flex;
-                                flex-flow: row nowrap;
                                 gap: 16px;
-                                width: 100%;
-
-                                @media screen and (max-width: 600px) {
-                                    flex-flow: column nowrap;
-                                }
-
-                                & > div {
-                                    flex-grow: 1;
-                                }
-                            }
-                        }
-                    }
-
-                    div.about-list {
-                        display: grid;
-                        grid-template-columns: 1fr 1fr;
-                        grid-template-rows: 1fr 1fr;
-                        gap: 24px;
-
-                        div.intro-card {
-                            grid-row: 1 / -1;
-
-                            @media screen and (max-width: 1100px) {
-                                grid-row: 1;
-                                grid-column: 1 / -1;
-                            }
-                        }
-
-                        @media screen and (max-width: 650px) {
-                            display: flex;
-                            flex-flow: column nowrap;
-                        }
-
-                        div.intro-card, div.skills-card, div.opportunities-card {
-                            padding: 15px;
-                            flex-grow: 1;
-                            border-radius: 5px;
-                            display: flex;
-                            flex-flow: column nowrap;
-                            gap: 16px;
-                            max-width: 950px;
-                            -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.06);
-                            box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.06);
-                            background-color: #fff;
-                            transition: all 1s ease-in-out;
-                            margin: auto;
-                            height: 100%;
-                            width: 100%;
-        
-                            p {
-                                font-size: 18px;
-                                line-height: 1.56;
-                                font-weight: 300;
     
-                                a {
-                                    color: #355c97;
+                                label {
+                                    font-size: 22px;
+                                    font-weight: 300;
+                                    color: #141414;
+                                }
+    
+                                input,
+                                textarea {
+                                    height: 40px;
+                                    border-radius: 4px;
+                                    font-size: 20px;
+                                    font-family: inherit;
+                                    padding: 8px;
+                                    border: none;
+                                    outline: none;
+                                    background-color: #f1f3f8;
+                                }
+    
+                                textarea {
+                                    height: 200px;
+                                    resize: none;
+                                }
+    
+                                button {
+                                    background: #355c97;
+                                    max-width: 100px;
+                                    height: 44px;
+                                    border-radius: 4px;
+                                    transition: all 0.2s ease-in-out;
+                                    padding: 0;
+                                    border: none;
+                                    font-size: 20px;
+                                    color: #ffffff;
+                                    text-align: center;
+                                    font-family: inherit;
     
                                     &:hover {
-                                        text-decoration: underline;
+                                        cursor: pointer;
+                                    }
+    
+                                    &:active {
+                                        transform: scale(0.9);
                                     }
                                 }
-                            }
     
-                            ul {
-                                display: flex;
-                                line-height: 24.5px;
-                                flex-flow: row wrap;
-                                justify-content: center;
-                                column-gap: 24px;
-
-                                @media screen and (max-width: 1100px) {
-                                    row-gap: 4px;    
+                                div.label-input {
+                                    display: flex;
+                                    flex-flow: column nowrap;
+                                    gap: 8px;
                                 }
-
-                                li {
-                                    flex-basis: 40%;
-                                    font-weight: 300;
     
-                                    @media screen and (max-width: 1100px) {
-                                        flex-basis: 60%;
+                                div.first-row {
+                                    display: flex;
+                                    flex-flow: row nowrap;
+                                    gap: 16px;
+                                    width: 100%;
+    
+                                    @media screen and (max-width: 600px) {
+                                        flex-flow: column nowrap;
+                                    }
+    
+                                    & > div {
+                                        flex-grow: 1;
                                     }
                                 }
                             }
                         }
-                    }
 
-
-                    div.projects-list {
-                        display: flex;
-                        flex-flow: row wrap;
-                        justify-content: center;
-                        gap: 45px;
-                        padding: 0 10px;
-
-                        @media screen and (max-width: 1100px) {
-                            gap: 30px;
-                            padding: 0;
-                        }
-
-                        div.project-card {
-                            padding: 15px;
-                            flex-grow: 1;
+                        &.project-card {
                             flex-basis: 45%;
                             max-width: 48%;
-                            border-radius: 5px;
-                            display: flex;
-                            flex-flow: column nowrap;
-                            -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.06);
-                            box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.06);
-                            background-color: #fff;
-                            transition: all 1s ease-in-out;
 
                             @media screen and (max-width: 1100px) {
                                 flex-basis: 60%;
@@ -964,32 +849,10 @@ body {
                                 }
                             }
                         }
-                    }
 
-                    div.job-list {
-                        display: flex;
-                        flex-flow: row wrap;
-                        justify-content: center;
-                        gap: 45px;
-                        padding: 0 10px;
-
-                        @media screen and (max-width: 1100px) {
-                            gap: 30px;
-                            padding: 0;
-                        }
-
-                        div.job-card {
-                            padding: 15px;
-                            flex-grow: 1;
+                        &.job-card {
                             flex-basis: 45%;
                             max-width: 48%;
-                            border-radius: 5px;
-                            display: flex;
-                            flex-flow: column nowrap;
-                            -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.06);
-                            box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.06);
-                            background-color: #fff;
-                            transition: all 1s ease-in-out;
 
                             @media screen and (max-width: 1100px) {
                                 flex-basis: 60%;
@@ -1068,32 +931,10 @@ body {
                                 }
                             }
                         }
-                    }
 
-                    div.degrees-list {
-                        display: flex;
-                        flex-flow: row wrap;
-                        justify-content: center;
-                        gap: 45px;
-                        padding: 0 10px;
-
-                        @media screen and (max-width: 1300px) {
-                            gap: 30px;
-                            padding: 0;
-                        }
-
-                        div.degree-card {
-                            padding: 15px;
-                            flex-grow: 1;
+                        &.degree-card {
                             flex-basis: 45%;
                             max-width: 48%;
-                            border-radius: 5px;
-                            display: flex;
-                            flex-flow: column nowrap;
-                            -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.06);
-                            box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.06);
-                            background-color: #fff;
-                            transition: all 1s ease-in-out;
 
                             @media screen and (max-width: 1300px) {
                                 flex-basis: 60%;
@@ -1170,32 +1011,10 @@ body {
                                 }
                             }
                         }
-                    }
 
-                    div.certifications-list {
-                        display: flex;
-                        flex-flow: row wrap;
-                        justify-content: center;
-                        gap: 45px;
-                        padding: 0 10px;
-
-                        @media screen and (max-width: 1250px) {
-                            gap: 30px;
-                            padding: 0;
-                        }
-
-                        div.certification-card {
-                            padding: 15px;
-                            flex-grow: 1;
+                        &.certification-card {
                             flex-basis: 45%;
                             max-width: 48%;
-                            border-radius: 5px;
-                            display: flex;
-                            flex-flow: column nowrap;
-                            -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.06);
-                            box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.06);
-                            background-color: #fff;
-                            transition: all 1s ease-in-out;
 
                             @media screen and (max-width: 1250px) {
                                 flex-basis: 60%;
@@ -1301,6 +1120,133 @@ body {
                                     }
                                 }
                             }
+                        }
+
+                    }
+
+                    div.about-list {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        grid-template-rows: 1fr 1fr;
+                        gap: 24px;
+
+                        div.intro-card {
+                            grid-row: 1 / -1;
+
+                            @media screen and (max-width: 1100px) {
+                                grid-row: 1;
+                                grid-column: 1 / -1;
+                            }
+                        }
+
+                        @media screen and (max-width: 650px) {
+                            display: flex;
+                            flex-flow: column nowrap;
+                        }
+
+                        div.intro-card, div.skills-card, div.opportunities-card {
+                            padding: 15px;
+                            flex-grow: 1;
+                            border-radius: 5px;
+                            display: flex;
+                            flex-flow: column nowrap;
+                            gap: 16px;
+                            max-width: 950px;
+                            -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.06);
+                            box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.06);
+                            background-color: #fff;
+                            transition: all 1s ease-in-out;
+                            margin: auto;
+                            height: 100%;
+                            width: 100%;
+        
+                            p {
+                                font-size: 18px;
+                                line-height: 1.56;
+                                font-weight: 300;
+    
+                                a {
+                                    color: #355c97;
+    
+                                    &:hover {
+                                        text-decoration: underline;
+                                    }
+                                }
+                            }
+    
+                            ul {
+                                display: flex;
+                                line-height: 24.5px;
+                                flex-flow: row wrap;
+                                justify-content: center;
+                                column-gap: 24px;
+
+                                @media screen and (max-width: 1100px) {
+                                    row-gap: 4px;    
+                                }
+
+                                li {
+                                    flex-basis: 40%;
+                                    font-weight: 300;
+    
+                                    @media screen and (max-width: 1100px) {
+                                        flex-basis: 60%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+
+                    div.projects-list {
+                        display: flex;
+                        flex-flow: row wrap;
+                        justify-content: center;
+                        gap: 45px;
+                        padding: 0 10px;
+
+                        @media screen and (max-width: 1100px) {
+                            gap: 30px;
+                            padding: 0;
+                        }
+                    }
+
+                    div.job-list {
+                        display: flex;
+                        flex-flow: row wrap;
+                        justify-content: center;
+                        gap: 45px;
+                        padding: 0 10px;
+
+                        @media screen and (max-width: 1100px) {
+                            gap: 30px;
+                            padding: 0;
+                        }
+                    }
+
+                    div.degrees-list {
+                        display: flex;
+                        flex-flow: row wrap;
+                        justify-content: center;
+                        gap: 45px;
+                        padding: 0 10px;
+
+                        @media screen and (max-width: 1300px) {
+                            gap: 30px;
+                            padding: 0;
+                        }
+                    }
+
+                    div.certifications-list {
+                        display: flex;
+                        flex-flow: row wrap;
+                        justify-content: center;
+                        gap: 45px;
+                        padding: 0 10px;
+
+                        @media screen and (max-width: 1250px) {
+                            gap: 30px;
+                            padding: 0;
                         }
                     }
                 }
