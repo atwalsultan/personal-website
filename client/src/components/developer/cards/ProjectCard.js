@@ -22,7 +22,7 @@ const ProjectCard = ({ project }) => {
     }, [project.links])
 
     return (
-        <div className={`project-card${hidden ? " hidden" : ""}`}>
+        <div className={`card project-card${hidden ? " hidden" : ""}`}>
             <div className="name-location">
                 <h3>{ project.name }</h3>
                 <h4>{ project.location }</h4>

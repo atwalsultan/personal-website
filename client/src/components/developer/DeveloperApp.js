@@ -10,7 +10,6 @@ import DeveloperAbout from "./pages/DeveloperAbout";
 import ScrollToTopButton from "./buttons/ScrollToTopButton";
 
 const DeveloperApp = () => {
-    const homeRef = useRef(null);
     const workRef = useRef(null);
     const experienceRef = useRef(null);
     const credentialsRef = useRef(null);

@@ -15,7 +15,7 @@ const DegreeCard = ({ degree }) => {
     }, [])
 
     return (
-        <div className={`degree-card${hidden ? " hidden" : ""}`}>
+        <div className={`card degree-card${hidden ? " hidden" : ""}`}>
             <div className="institution-location">
                 <h3>{ degree.institution }</h3>
                 <h4>{ degree.location }</h4>

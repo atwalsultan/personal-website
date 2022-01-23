@@ -10,7 +10,7 @@ const ContactCard = () => {
     }, [])
 
     return (
-        <div className={`contact-card${hidden ? " hidden" : ""}`}>
+        <div className={`card contact-card${hidden ? " hidden" : ""}`}>
             <form className="contact-form" id="developerContact" action="/developer/contact" method="POST">
                 <div className="first-row">
                     <div className="label-input">
