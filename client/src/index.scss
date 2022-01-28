@@ -275,6 +275,26 @@ body {
                             box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.01);
                             background-color: #242323;
 
+                            h3, p, li, svg {
+                                color: #fff;
+                            }
+
+                            & > div.first-row {
+                                h4 {
+                                    color: #bcbcbc;
+                                }
+                            }
+
+                            & > div.second-row {
+                                h4:first-of-type {
+                                    color: #bdd237;
+                                }
+
+                                h4:last-of-type {
+                                    color: #bcbcbc;
+                                }
+                            }
+
                             ul.tech-used {
                                 li {
                                     background-color: #576403;
@@ -304,94 +324,6 @@ body {
                                     button {
                                         background: #bdd237;
                                         color: #363636;
-                                    }
-                                }
-                            }
-
-                            &.project-card {
-                                h3, p {
-                                    color: #fff;
-                                }
-    
-                                div.name-location {
-                                    h4 {
-                                        color: #bcbcbc;
-                                    }
-                                }
-    
-                                div.role-dates {
-                                    h4:first-of-type {
-                                        color: #bdd237;
-                                    }
-    
-                                    h4:last-of-type {
-                                        color: #bcbcbc;
-                                    }
-                                }
-                            }
-
-                            &.job-card {
-                                h3, p {
-                                    color: #fff;
-                                }
-    
-                                div.company-location {
-                                    h4 {
-                                        color: #bcbcbc;
-                                    }
-                                }
-    
-                                div.role-dates {
-                                    h4:first-of-type {
-                                        color: #bdd237;
-                                    }
-    
-                                    h4:last-of-type {
-                                        color: #bcbcbc;
-                                    }
-                                }
-                            }
-
-                            &.degree-card {
-                                h3, p, li {
-                                    color: #fff;
-                                }
-
-                                div.institution-location {
-                                    h4 {
-                                        color: #bcbcbc;
-                                    }
-                                }
-
-                                div.program-dates {
-                                    h4:first-of-type {
-                                        color: #bdd237;
-                                    }
-
-                                    h4:last-of-type {
-                                        color: #bcbcbc;
-                                    }
-                                }
-                            }
-
-                            &.certification-card {
-                                h3, p, li, svg {
-                                    color: #fff;
-                                }
-
-                                div.name-location {
-                                    h4 {
-                                        color: #bcbcbc;
-                                    }
-                                }
-
-                                div.institution-dates {
-                                    h4:first-of-type {
-                                        color: #bdd237;
-                                    }
-
-                                    h4:last-of-type {
-                                        color: #bcbcbc;
                                     }
                                 }
                             }
@@ -646,6 +578,59 @@ body {
                         box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.06);
                         background-color: #fff;
                         transition: all 1s ease-in-out;
+                        flex-basis: 45%;
+                        max-width: 48%;
+
+                        & > div.first-row {
+                            display: flex;
+                            flex-flow: row nowrap;
+                            justify-content: space-between;
+                            gap: 8px;
+                            align-items: center;
+
+                            h3 {
+                                font-size: 22px;
+                                font-weight: 400;
+                            }
+
+                            h4 {
+                                font-weight: 300;
+                                font-size: 18px;
+                                color: #5a5a5a;
+                            }
+                        }
+
+                        & > div.second-row {
+                            display: flex;
+                            flex-flow: row nowrap;
+                            justify-content: space-between;
+                            gap: 8px;
+                            margin: 16px 0;
+
+                            @media screen and (max-width: 420px) {
+                                flex-flow: column nowrap;
+                                gap: 2px;
+                            }
+
+                            h4 {
+                                font-weight: 300;
+                                font-size: 18px;
+                                color: #5a5a5a;
+                            }
+
+                            h4:first-of-type {
+                                font-size: 20px;
+                                color: #355c97;
+                            }
+                        }
+
+                        div.description {
+                            p {
+                                font-size: 18px;
+                                line-height: 1.56;
+                                font-weight: 300;
+                            }
+                        }
 
                         ul.tech-used {
                             display: flex;
@@ -689,6 +674,8 @@ body {
                             gap: 16px;
                             width: 700px;
                             margin: auto;
+                            flex-basis: initial;
+                            max-width: initial;
 
                             @media screen and (max-width: 1050px) {
                                 width: 100%;
@@ -767,11 +754,8 @@ body {
                             }
                         }
 
-                        &.project-card {
-                            flex-basis: 45%;
-                            max-width: 48%;
-
-                            @media screen and (max-width: 1100px) {
+                        &.project-card, &.job-card, &.certification-card {
+                            @media screen and (max-width: 1250px) {
                                 flex-basis: 60%;
                                 max-width: 85%;
                             }
@@ -782,132 +766,10 @@ body {
 
                             @media screen and (max-width: 600px) {
                                 max-width: 100%;
-                            }
-
-                            div.name-location {
-                                display: flex;
-                                flex-flow: row nowrap;
-                                justify-content: space-between;
-                                gap: 8px;
-                                align-items: center;
-
-                                h3 {
-                                    font-size: 22px;
-                                    font-weight: 400;
-                                }
-
-                                h4 {
-                                    font-weight: 300;
-                                    font-size: 18px;
-                                    color: #5a5a5a;
-                                }
-                            }
-
-                            div.role-dates {
-                                display: flex;
-                                flex-flow: row nowrap;
-                                justify-content: space-between;
-                                gap: 8px;
-                                margin: 16px 0;
-
-                                @media screen and (max-width: 420px) {
-                                    flex-flow: column nowrap;
-                                    gap: 2px;
-                                }
-
-                                h4 {
-                                    font-weight: 300;
-                                    font-size: 18px;
-                                    color: #5a5a5a;
-                                }
-
-                                h4:first-of-type {
-                                    font-size: 20px;
-                                    color: #355c97;
-                                }
-                            }
-
-                            div.description {
-                                p {
-                                    font-size: 18px;
-                                    line-height: 1.56;
-                                    font-weight: 300;
-                                }
-                            }
-                        }
-
-                        &.job-card {
-                            flex-basis: 45%;
-                            max-width: 48%;
-
-                            @media screen and (max-width: 1100px) {
-                                flex-basis: 60%;
-                                max-width: 85%;
-                            }
-
-                            @media screen and (max-width: 900px) {
-                                max-width: 95%;
-                            }
-
-                            @media screen and (max-width: 600px) {
-                                max-width: 100%;
-                            }
-
-                            div.company-location {
-                                display: flex;
-                                flex-flow: row nowrap;
-                                justify-content: space-between;
-                                gap: 8px;
-                                align-items: center;
-
-                                h3 {
-                                    font-size: 22px;
-                                    font-weight: 400;
-                                }
-
-                                h4 {
-                                    font-weight: 300;
-                                    font-size: 18px;
-                                    color: #5a5a5a;
-                                }
-                            }
-
-                            div.role-dates {
-                                display: flex;
-                                flex-flow: row nowrap;
-                                justify-content: space-between;
-                                gap: 8px;
-                                margin: 16px 0;
-
-                                @media screen and (max-width: 420px) {
-                                    flex-flow: column nowrap;
-                                    gap: 2px;
-                                }
-
-                                h4 {
-                                    font-weight: 300;
-                                    font-size: 18px;
-                                    color: #5a5a5a;
-                                }
-
-                                h4:first-of-type {
-                                    color: #355c97;
-                                }
-                            }
-
-                            div.description {
-                                p {
-                                    font-size: 18px;
-                                    line-height: 1.56;
-                                    font-weight: 300;
-                                }
                             }
                         }
 
                         &.degree-card {
-                            flex-basis: 45%;
-                            max-width: 48%;
-
                             @media screen and (max-width: 1300px) {
                                 flex-basis: 60%;
                                 max-width: 60%;
@@ -934,44 +796,9 @@ body {
                                 margin-left: 16px;
                             }
 
-                            div.institution-location {
-                                display: flex;
-                                flex-flow: row nowrap;
-                                justify-content: space-between;
-                                gap: 8px;
-                                align-items: center;
-
-                                h3 {
-                                    font-size: 22px;
-                                    font-weight: 400;
-                                }
-
+                            div.second-row {
                                 h4 {
-                                    font-weight: 300;
                                     font-size: 18px;
-                                }
-                            }
-
-                            div.program-dates {
-                                display: flex;
-                                flex-flow: row nowrap;
-                                justify-content: space-between;
-                                gap: 8px;
-                                margin: 16px 0;
-
-                                @media screen and (max-width: 535px) {
-                                    flex-flow: column nowrap;
-                                    gap: 2px;
-                                }
-
-                                h4 {
-                                    font-weight: 300;
-                                    font-size: 18px;
-                                    color: #5a5a5a;
-                                }
-                                
-                                h4:first-of-type {
-                                    color: #355c97;
                                 }
                             }
 
@@ -985,72 +812,14 @@ body {
                         }
 
                         &.certification-card {
-                            flex-basis: 45%;
-                            max-width: 48%;
-
-                            @media screen and (max-width: 1250px) {
-                                flex-basis: 60%;
-                                max-width: 85%;
-                            }
-
-                            @media screen and (max-width: 900px) {
-                                max-width: 95%;
-                            }
-
-                            @media screen and (max-width: 600px) {
-                                max-width: 100%;
-                            }
-
-                            div.name-location {
-                                display: flex;
-                                flex-flow: row nowrap;
-                                justify-content: space-between;
-                                gap: 8px;
-                                align-items: center;
-
-                                h3 {
-                                    font-size: 22px;
-                                    font-weight: 400;
-                                }
-
+                            div.second-row {
                                 h4 {
-                                    font-weight: 300;
                                     font-size: 18px;
-                                    color: #5a5a5a;
-                                }
-                            }
-
-                            div.institution-dates {
-                                display: flex;
-                                flex-flow: row nowrap;
-                                justify-content: space-between;
-                                gap: 8px;
-                                margin: 16px 0;
-
-                                @media screen and (max-width: 500px) {
-                                    flex-flow: column nowrap;
-                                    gap: 2px;
-                                }
-
-                                h4 {
-                                    font-weight: 300;
-                                    font-size: 18px;
-                                    color: #5a5a5a;
-                                }
-
-                                h4:first-of-type {
-                                    color: #355c97;
                                 }
                             }
 
                             div.description {
                                 margin-bottom: 24px;
-
-                                p {
-                                    font-size: 18px;
-                                    line-height: 1.56;
-                                    font-weight: 300;
-                                }
                             }
 
                             ul.tech-used {

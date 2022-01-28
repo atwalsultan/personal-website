@@ -18,12 +18,12 @@ const ExperienceCard = ({ job }) => {
    
     return (
         <div className={`card job-card${hidden ? " hidden" : ""}`}>
-            <div className="company-location">
+            <div className="first-row">
                 <h3>{ job.company }</h3>
                 <h4>{ job.location }</h4>
             </div>
 
-            <div className="role-dates">
+            <div className="second-row">
                 <h4>{ job.role }</h4>
                 { (from.getMonth() === to.getMonth() && from.getFullYear() === to.getFullYear()) ? <h4>{ months[from.getMonth()]} { from.getFullYear() }</h4> : <h4>{ months[from.getMonth()]} { from.getFullYear() } - { months[to.getMonth()] } { to.getFullYear() }</h4> }
             </div>

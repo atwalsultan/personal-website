@@ -32,12 +32,12 @@ const CertificationCard = ({ certification }) => {
 
     return (
         <div className={`card certification-card${hidden ? " hidden" : ""}`}>
-            <div className="name-location">
+            <div className="first-row">
                 <h3>{ certification.name }</h3>
                 <h4>{ certification.location }</h4>
             </div>
 
-            <div className="institution-dates">
+            <div className="second-row">
                 <h4>{ certification.institution }</h4>
                 <h4>{ months[to.getMonth()] } { to.getFullYear() }</h4>
             </div>
