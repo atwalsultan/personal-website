@@ -10,63 +10,105 @@ import DeveloperAbout from "./pages/DeveloperAbout";
 import ScrollToTopButton from "./buttons/ScrollToTopButton";
 
 const DeveloperApp = () => {
-    const workRef = useRef(null);
-    const experienceRef = useRef(null);
-    const credentialsRef = useRef(null);
-    const contactRef = useRef(null);
-    const aboutRef = useRef(null);
+  const workRef = useRef(null);
+  const experienceRef = useRef(null);
+  const credentialsRef = useRef(null);
+  const contactRef = useRef(null);
+  const aboutRef = useRef(null);
 
-    const [currentPage, setCurrentPage] = useState("home");
-    const [nightMode, setNightMode] = useState(true);
-    const [menu, setMenu] = useState(false);
+  const [currentPage, setCurrentPage] = useState("home");
+  const [nightMode, setNightMode] = useState(true);
+  const [menu, setMenu] = useState(false);
 
-    useEffect(() => {
-        const savedMode = localStorage.getItem("nightMode");
-        const savedModeJSON = JSON.parse(savedMode);
-        
-        if(savedModeJSON !== null) {
-            setNightMode(savedModeJSON);
-        }
-    }, []);
+  useEffect(() => {
+    const savedMode = localStorage.getItem("nightMode");
+    const savedModeJSON = JSON.parse(savedMode);
 
-    const scrollToTop = () => {
-        if(currentPage === "work") {
-            workRef.current.scrollIntoView({ behavior: "smooth" });
-        }
+    if (savedModeJSON !== null) {
+      setNightMode(savedModeJSON);
+    }
+  }, []);
 
-        if(currentPage === "experience") {
-            experienceRef.current.scrollIntoView({ behavior: "smooth" });
-        }
+  const scrollToTop = () => {
+    if (currentPage === "work") {
+      workRef.current.scrollIntoView({ behavior: "smooth" });
+    }
 
-        if(currentPage === "credentials") {
-            credentialsRef.current.scrollIntoView({ behavior: "smooth" });
-        }
+    if (currentPage === "experience") {
+      experienceRef.current.scrollIntoView({ behavior: "smooth" });
+    }
 
-        if(currentPage === "about") {
-            aboutRef.current.scrollIntoView({ behavior: "smooth" });
-        }
-    };
+    if (currentPage === "credentials") {
+      credentialsRef.current.scrollIntoView({ behavior: "smooth" });
+    }
 
-    return (
-        <>
-            <Header nightMode={ nightMode } menu={ menu } setMenu={ setMenu } />
+    if (currentPage === "about") {
+      aboutRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
-            <div className={ nightMode ? "navbar-content dark" : "navbar-content" }>
-                <Navbar nightMode={ nightMode } setNightMode={ setNightMode } menu={ menu } currentPage={ currentPage } />
+  return (
+    <>
+      <Header nightMode={nightMode} menu={menu} setMenu={setMenu} />
 
-                <main className="site-content-container">
-                    <ScrollToTopButton scrollToTop={ scrollToTop } />
+      <div className={nightMode ? "navbar-content dark" : "navbar-content"}>
+        <Navbar
+          nightMode={nightMode}
+          setNightMode={setNightMode}
+          menu={menu}
+          currentPage={currentPage}
+        />
 
-                    <Routes>
-                        <Route path="/" element={<DeveloperWork setCurrentPage={ setCurrentPage } workRef={ workRef } setMenu={ setMenu } />} />
-                        <Route path="/experience" element={<DeveloperExperience setCurrentPage={ setCurrentPage } experienceRef={ experienceRef } setMenu={ setMenu } />} />
-                        <Route path="/credentials" element={<DeveloperCredentials setCurrentPage={ setCurrentPage } credentialsRef={ credentialsRef } setMenu={ setMenu } />} />
-                        <Route path="/about" element={<DeveloperAbout setCurrentPage={ setCurrentPage } aboutRef={ aboutRef } contactRef={ contactRef } setMenu={ setMenu } />} />
-                    </Routes>
-                </main>
-            </div>
-        </>
-    )
-}
+        <main className="site-content-container">
+          <ScrollToTopButton scrollToTop={scrollToTop} />
 
-export default DeveloperApp
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <DeveloperWork
+                  setCurrentPage={setCurrentPage}
+                  workRef={workRef}
+                  setMenu={setMenu}
+                />
+              }
+            />
+            <Route
+              path="/experience"
+              element={
+                <DeveloperExperience
+                  setCurrentPage={setCurrentPage}
+                  experienceRef={experienceRef}
+                  setMenu={setMenu}
+                />
+              }
+            />
+            <Route
+              path="/credentials"
+              element={
+                <DeveloperCredentials
+                  setCurrentPage={setCurrentPage}
+                  credentialsRef={credentialsRef}
+                  setMenu={setMenu}
+                />
+              }
+            />
+            <Route
+              path="/about"
+              element={
+                <DeveloperAbout
+                  setCurrentPage={setCurrentPage}
+                  aboutRef={aboutRef}
+                  contactRef={contactRef}
+                  setMenu={setMenu}
+                />
+              }
+            />
+          </Routes>
+        </main>
+      </div>
+    </>
+  );
+};
+
+export default DeveloperApp;
