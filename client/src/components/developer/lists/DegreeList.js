@@ -1,35 +1,32 @@
-import { useState, useEffect } from "react";
-
 import DegreeCard from "../cards/DegreeCard";
 
 const DegreeList = () => {
-    const [degrees, setDegrees] = useState([]);
+  const degrees = [
+    {
+      institution: "Example College",
+      credential: "Master of Science",
+      program: "Computer Science Program",
+      from: "9/1/2020",
+      to: "12/1/2021",
+      location: "Vancouver, BC",
+      gpa: 4.09,
+      percentage: null,
+    },
+    {
+      institution: "Example College",
+      credential: "Bachelor of Science",
+      program: "Computer Science Program",
+      from: "9/1/2020",
+      to: "12/1/2021",
+      location: "Vancouver, BC",
+      gpa: 4.09,
+      percentage: null,
+    },
+  ];
 
-    // Fetch degrees
-    const getDegrees = async () => {
-        const url = "/education";
-        const response = await fetch(url);
-        const responseJson = await response.json();
-        setDegrees(responseJson);
-    }
+  return degrees
+    .sort((a, b) => new Date(b.to) - new Date(a.to))
+    .map((item, index) => <DegreeCard key={index} degree={item} />);
+};
 
-    useEffect(() => {
-        let unmounted = false;
-
-        // Fetch degrees when component mounts
-        if (!unmounted) {
-            getDegrees();
-        }
-
-        // Unsubscribe to any background calls when component unmounts
-        return () => {
-            unmounted = true;
-        }
-    }, [])
-
-    return (
-        degrees.sort((a, b) => new Date(b.to) - new Date(a.to)).map((item, index) => <DegreeCard key={ index } degree={ item } />)
-    )
-}
-
-export default DegreeList
+export default DegreeList;
